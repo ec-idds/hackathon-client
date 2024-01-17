@@ -24,8 +24,7 @@ function Seeker() {
       //flashlight vision
       push();
       beginClip({ invert: true });
-      // arc(seeker.x, seeker.y, 80, 80, 0, PI + QUARTER_PI, PIE);
-      triangle(seeker.x, seeker.y + seeker.size/2, seeker.x - 100, 0, seeker.y + 100, 0);
+      arc(seeker.x, seeker.y, 450, 450, radians(230), radians(-35), PIE);
       endClip();
 
       fill('black');
