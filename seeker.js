@@ -2,6 +2,7 @@
 // figure out how to implement movement of the shaded area 
 
 
+
  
 function Seeker() {
 
@@ -15,8 +16,10 @@ function Seeker() {
       ellipse(this.x, this.y, this.size, this.size);
           }
   }
-
+  
   let flashlightVision = {
+    start: radians(230),
+    end: radians(-35),
     draw: function() {
 
     noStroke();
@@ -24,7 +27,7 @@ function Seeker() {
       //flashlight vision
       push();
       beginClip({ invert: true });
-      arc(seeker.x, seeker.y, 450, 450, radians(230), radians(-35), PIE);
+      arc(seeker.x, seeker.y, 450, 450, this.start, this.end, PIE);
       endClip();
 
       fill('black');
@@ -42,22 +45,31 @@ function Seeker() {
     flashlightVision.draw();
     seeker.draw();
     
-
+    
     if(keyIsPressed){
       if(keyCode == LEFT_ARROW){
         seeker.x--;
+        flashlightVision.start = radians(150);
+        flashlightVision.end = radians(210);
+        
       } else if (keyCode == RIGHT_ARROW){
         seeker.x++;
+        flashlightVision.start = radians(-30);
+        flashlightVision.end = radians(30);
       }
       if (keyCode == UP_ARROW){
         seeker.y--;
+        flashlightVision.start = radians(-120);
+        flashlightVision.end = radians(-60);
       } else if (keyCode == DOWN_ARROW){
         seeker.y++;
+        flashlightVision.start = radians(60);
+        flashlightVision.end = radians(120);
     }
   }
   }
 
-  // put seeker in here
+  // hard code the locations  
 }
 
 
