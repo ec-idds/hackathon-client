@@ -6,11 +6,11 @@ function Quad() {
 
     this.setup = function () {
     // canvas
-    createCanvas(500, 500);
+    createCanvas(windowWidth, windowHeight);
   }
   
   this.draw = function () {
-    background(220);
+    image(squirrel, 10, 10, 20, 20);
     if(keyIsPressed){
       if(keyCode == LEFT_ARROW){
         x--;

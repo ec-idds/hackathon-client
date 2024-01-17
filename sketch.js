@@ -1,6 +1,11 @@
 
 let pages = [Quad, JYC]
 
+let squirrel;
+
+preload = function () {
+    squirrel = loadImage('game_designs/quad/squirrel.png');
+  }
 
 function setup () {
 
