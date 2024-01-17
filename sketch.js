@@ -1,10 +1,12 @@
 
 let pages = [Quad, JYC]
 let trashcan;
+let squirrel;
 let player;
 
 function preload () {
   trashcan = loadImage('game_designs/universal/trashcan.jpg');
+  squirrel = loadImage('game_designs/quad/squirrel.png');
 }
 
 function setup () {
