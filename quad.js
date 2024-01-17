@@ -5,6 +5,7 @@ function Quad() {
   let d = 40;
   let mapOn = false;
 
+
   let JYCZone = {
     x: 400,
     y: 400,
