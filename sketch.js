@@ -9,7 +9,7 @@ let player;
 function preload () {
   campus_bg = loadImage('PH.png');
   lobby_bg = loadImage('ECQ.png');
-  trashcan = loadImage('game_designs/universal/trashcan.jpg');
+  trashcan = loadImage('game_designs/universal/trashcan.png');
   squirrel = loadImage('game_designs/quad/squirrel.png');
 }
 
