@@ -3,6 +3,7 @@ let pages = [Quad, JYC, dorm, Library, wilkens];
 let campus_bg;
 let lobby_bg;
 let trashcan;
+let squirrel;
 let player;
 
 let speed = 3;
@@ -23,7 +24,7 @@ let lobbyMus;
 function preload () {
   campus_bg = loadImage('PH.png');
   lobby_bg = loadImage('ECQ.png');
-  trashcan = loadImage('game_designs/universal/trashcan.jpg');
+  trashcan = loadImage('game_designs/universal/trashcan.png');
   buttonClickSound = loadSound('project_music/ButtonClick.mp3');
   deathNoise = loadSound('project_music/DeathNoise.mp3');
   stJuliesMus = loadSound('project_music/Dorm.mp3');
@@ -37,6 +38,7 @@ function preload () {
   walkingMus = loadSound('project_music/Walking.mp3');
   wilkensMus = loadSound('project_music/Wilkens.mp3');
   lobbyMus = loadSound('project_music/Lobby.mp3');
+  squirrel = loadImage('game_designs/quad/squirrel.png');
 }
 
 function setup () {
