@@ -4,6 +4,11 @@ let campus_bg;
 let lobby_bg;
 let trashcan;
 let player;
+let libraryMap;
+let quadMap;
+let JYCMap;
+let stJuliesMap;
+let wilkensMap;
 
 let speed = 3;
 let buttonClick;
@@ -49,6 +54,11 @@ let plasticwb;
 let reusablewb;
 
 function preload () {
+  libraryMap = loadImage('mapImages/libraryMap.png');
+  quadMap = loadImage('mapImages/quadMap.png');
+  JYCMap = loadImage('mapImages/JYCMap.png');
+  wilkensMap = loadImage('mapImages/wilkensMap.png');
+  stJuliesMap = loadImage('mapImages/stJuliesMap.png');
   campus_bg = loadImage('PH.png');
   lobby_bg = loadImage('ECQ.png');
   buttonClickSound = loadSound('project_music/ButtonClick.mp3');
