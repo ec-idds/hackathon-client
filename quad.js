@@ -63,6 +63,7 @@ function Quad() {
 
   this.draw = function () {
     background(220);
+    
     if (keyIsPressed) {
       player.keyIsPressed(keyCode);
 
@@ -73,7 +74,6 @@ function Quad() {
         }
         
       }
-
       JYCZone.draw();
       dormZone.draw();
       libraryZone.draw();
@@ -116,6 +116,7 @@ function Quad() {
       }
 
       player.draw();
+      
     }
 
   }

@@ -2,6 +2,21 @@ function Lobby() {
 
   this.setup = function () {
     new Canvas()
+    let gold = color(242, 185, 11);
+    let darkblue = color(31, 75, 126);
+    let startButton = createButton("Press to Start");
+    startButton.position((width/2)-187,(height/2)-25);
+    startButton.size(375,75);
+    startButton.style('font-size', '50px');
+    startButton.style('background-color', gold);
+    startButton.style('color', darkblue);
+    startButton.style('font-family', "Pixelify Sans");
+    startButton.style('border-color', darkblue);
+  
+    startButton.mousePressed(() => {
+      startButton.hide();
+      this.sceneManager.showScene( Quad );
+    });
 
   }
   this.draw = function () {
