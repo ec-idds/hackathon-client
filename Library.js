@@ -47,7 +47,7 @@ function Library() {
   let mapOn = false;
 
   if(keyIsPressed){
-    if(keyCode == BACKSPACE){
+    if(keyCode == SHIFT){
       mapOn = true;
     } else {
       mapOn = false;
