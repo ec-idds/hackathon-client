@@ -1,8 +1,8 @@
-function JYC() {
-
-    let player = {
-    x: 360,
-    y: 420,
+function dorm() {
+    
+  let player = {
+    x: 400,
+    y: 40,
     size: 40,
     draw: function() {
       fill('red');
@@ -10,7 +10,7 @@ function JYC() {
     }
   };
 
-let miniMap = {
+  let miniMap = {
     x: 50,
     y: 50,
     size: 400,
@@ -21,8 +21,8 @@ let miniMap = {
   };
 
   let QuadZone = {
-  x: 400,
-  y: 400,
+  x: 440,
+  y: 20,
   size: 40,
   draw: function() {
     fill('red');
@@ -34,13 +34,11 @@ let miniMap = {
     // canvas
     createCanvas(500, 500);
   }
-
   
   this.draw = function () {
-    background('blue');
+    background('green');
     player.draw();
     QuadZone.draw();
-
 
     if(keyIsPressed){
       if(keyCode == LEFT_ARROW){
@@ -54,7 +52,7 @@ let miniMap = {
         player.y = player.y + 3;
     }  
   }
-  
+
   let mapOn = false;
 
   if(keyIsPressed){
@@ -72,11 +70,9 @@ let miniMap = {
   let QuadDist = dist(player.x, player.y, QuadZone.x + QuadZone.size / 2, QuadZone.y + QuadZone.size / 2);
   if(QuadDist < 30) {
     this.sceneManager.showScene( Quad );
-    player.x = 360;
-    player.y = 420;
-    QuadZone.y = 400;
+    player.x = 400;
+    player.y = 40;
+    QuadZone.y = 20;
   }
-
   }
-
 }
