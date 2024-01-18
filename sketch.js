@@ -2,7 +2,7 @@
 let pages = [Quad, JYC, dorm, Library, wilkens];
 let campus_bg;
 let lobby_bg;
-let campus_bg;
+let trashcan;
 let player;
 
 let speed = 3;
