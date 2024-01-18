@@ -1,5 +1,7 @@
 function Library() {
   
+  let sprites = [];
+
   let miniMap = {
     x: 50,
     y: 50,
@@ -24,6 +26,9 @@ function Library() {
     this.setup = function () {
     // canvas
     createCanvas(500, 500);
+    for(let i = 0; i < 3; i++){
+      sprites.push(new Sprite(trashcan, 250 + i * 20, 5, 20, 20));
+    }
   }
   
   this.draw = function () {
@@ -52,6 +57,10 @@ function Library() {
     } else {
       mapOn = false;
     }
+  }
+
+  for(s of sprites){
+    s.draw();
   }
 
   if(mapOn == true){

@@ -1,5 +1,7 @@
 function JYC() {
 
+let sprites = [];
+
 let miniMap = {
     x: 50,
     y: 50,
@@ -23,6 +25,9 @@ let miniMap = {
     this.setup = function () {
     // canvas
     createCanvas(500, 500);
+    for(let i = 0; i < 3; i++){
+      sprites.push(new Sprite(trashcan, 250 + i * 20, 5, 20, 20));
+    }
   }
 
   
@@ -65,6 +70,10 @@ let miniMap = {
     player.x = 360;
     player.y = 420;
     QuadZone.y = 400;
+  }
+
+  for(s of sprites){
+    s.draw();
   }
 
   }
