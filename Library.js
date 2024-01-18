@@ -1,5 +1,15 @@
 function Library() {
-  
+    
+  let player = {
+    x: 420,
+    y: 335,
+    size: 40,
+    draw: function() {
+      fill('red');
+      ellipse(this.x, this.y, this.size, this.size);
+    }
+  };
+
   let miniMap = {
     x: 50,
     y: 50,
@@ -11,25 +21,25 @@ function Library() {
   };
 
   let QuadZone = {
-  x: 100,
-  y: 20,
-  size: 40,
+  x: 420,
+  y: 335,
+  size: 70,
   draw: function() {
-    fill('red');
+    fill('black');
     rect(this.x, this.y, this.size, this.size);
   }
 }; 
 
 
     this.setup = function () {
-    // canvas
-    createCanvas(500, 500);
+
   }
   
   this.draw = function () {
-    background('pink')
-    player.draw();
+    createCanvas(1366, 1026);
     QuadZone.draw();
+    image(libraryMap, 0, 0, 1366, 1026);
+    player.draw();
 
     if(keyIsPressed){
       if(keyCode == LEFT_ARROW){
@@ -59,11 +69,10 @@ function Library() {
   }
 
   let QuadDist = dist(player.x, player.y, QuadZone.x + QuadZone.size / 2, QuadZone.y + QuadZone.size / 2);
-  if(QuadDist < 30) {
+  if(QuadDist < 50) {
     this.sceneManager.showScene( Quad );
-    player.x = 180;
-    player.y = 40;
-    QuadZone.y = 20;
+    player.x = 0;
+    player.y = 30;
   }
   }
 }

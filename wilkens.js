@@ -1,4 +1,14 @@
 function wilkens() {
+  
+  let player = {
+    x: 465,
+    y: 595,
+    size: 40,
+    draw: function() {
+      fill('red');
+      ellipse(this.x, this.y, this.size, this.size);
+    }
+  };
 
   let miniMap = {
     x: 50,
@@ -11,24 +21,24 @@ function wilkens() {
   };
 
   let QuadZone = {
-  x: 100,
-  y: 420,
-  size: 40,
+  x: 465,
+  y: 595,
+  size: 70,
   draw: function() {
-    fill('red');
+    fill('black');
     rect(this.x, this.y, this.size, this.size);
   }
 }; 
 
     this.setup = function () {
-    // canvas
-    createCanvas(500, 500);
+    
   }
   
   this.draw = function () {
-    background('yellow');
-    player.draw();
+    createCanvas(475, 619);
     QuadZone.draw();
+    image(wilkensMap, 0, 0, 475, 619);
+    player.draw();
 
     if(keyIsPressed){
       if(keyCode == LEFT_ARROW){
@@ -58,11 +68,10 @@ function wilkens() {
   }
 
   let QuadDist = dist(player.x, player.y, QuadZone.x + QuadZone.size / 2, QuadZone.y + QuadZone.size / 2);
-  if(QuadDist < 30) {
+  if(QuadDist < 50) {
     this.sceneManager.showScene( Quad );
-    player.x = 180;
-    player.y = 440;
-    QuadZone.y = 420;
+    player.x = 0;
+    player.y = 30;
   }
 
   }
