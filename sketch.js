@@ -21,7 +21,6 @@ let wilkensMus;
 let lobbyMus;
 
 //sprites
-let trashcan;
 let squirrel;
 let chair1;
 let chair2;
@@ -48,7 +47,6 @@ let dodgeball;
 let bed;
 let plasticwb;
 let reusablewb;
-let buttonClick;
 
 function preload () {
   campus_bg = loadImage('PH.png');
