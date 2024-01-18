@@ -3,7 +3,6 @@ let pages = [Quad, JYC, dorm, Library, wilkens];
 let campus_bg;
 let lobby_bg;
 let trashcan;
-let campus_bg;
 let player;
 
 let speed = 3;
@@ -20,7 +19,6 @@ let victoryJam;
 let walkingMus;
 let wilkensMus;
 let lobbyMus;
-let buttonClick;
 
 function preload () {
   campus_bg = loadImage('PH.png');
