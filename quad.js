@@ -82,25 +82,11 @@ function Quad() {
     }
 
     let mapOn = false;
-    if (keyIsPressed) {
-      player.keyIsPressed(keyCode);
-
-        if (keyCode == BACKSPACE) {
-          mapOn = true;
-        } else {
-          mapOn = false;
-        }
-        
-      }
 
       JYCZone.draw();
       dormZone.draw();
       libraryZone.draw();
       wilkensZone.draw();
-
-      if (mapOn == true) {
-        miniMap.draw();
-      }
 
       let jycDist = dist(player.x, player.y, JYCZone.x + JYCZone.size / 2, JYCZone.y + JYCZone.size / 2);
       if (jycDist < 37) {
@@ -135,6 +121,21 @@ function Quad() {
       }
 
       player.draw();
+
+      if (keyIsPressed) {
+        player.keyIsPressed(keyCode);
+  
+          if (keyCode == SHIFT) {
+            mapOn = true;
+          } else {
+            mapOn = false;
+          }
+          
+        }
+  
+        if (mapOn == true) {
+          miniMap.draw();
+        }
       
     }
 
