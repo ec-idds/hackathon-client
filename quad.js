@@ -4,7 +4,6 @@ function Quad() {
   let y = 200;
   let d = 40;
 
-  let sprites = [];
   let mapOn = false;
 
   let JYCZone = {
@@ -58,23 +57,12 @@ function Quad() {
   };
 
   this.setup = function () {
-    // canvas
-    createCanvas(windowWidth, windowHeight);
-    for(let i = 0; i < 3; i++){
-      sprites.push(new Sprite(trashcan, 250 + i * 20, 5, 20, 20));
-    }
-  }
 
   }
 
   this.draw = function () {
     createCanvas(556, 619);
     image(quadMap, 0, 0, 556, 619);
-    ackground(220);
-
-    for(s of sprites){
-      s.draw();
-    }    
     JYCZone.draw();
     dormZone.draw();
     libraryZone.draw();
@@ -148,9 +136,6 @@ function Quad() {
         if (mapOn == true) {
           miniMap.draw();
         }
-      
-    }
-    if (mouseIsPressed && x <= width / 3 && x >= width/3 + 40 && y >= 0 && y <= height / 12) {
       
     }
 
