@@ -13,16 +13,16 @@ function dorm() {
   };
 
   let QuadZone = {
-  x: 440,
-  y: 20,
-  size: 40,
-  draw: function() {
-    fill('red');
-    rect(this.x, this.y, this.size, this.size);
-  }
-}; 
+    x: 440,
+    y: 20,
+    size: 40,
+    draw: function() {
+      fill('red');
+      rect(this.x, this.y, this.size, this.size);
+    }
+  }; 
 
-    this.setup = function () {
+  this.setup = function () {
     // canvas
     createCanvas(500, 500);
     for(let i = 20; i < 23; i++){
@@ -35,6 +35,16 @@ function dorm() {
     player.draw();
     QuadZone.draw();
 
+    if (mouseIsPressed && (mouseY < 24) && (mouseY > 3) && (mouseX > 250) && (mouseX < 270)) {
+      player.image = propArray[20];
+    }
+    if (mouseIsPressed && (mouseY < 24) && (mouseY > 3) && (mouseX > 273) && (mouseX < 293)) {
+      player.image = propArray[21];
+    }
+    if (mouseIsPressed && (mouseY < 24) && (mouseY > 3) && (mouseX > 305) && (mouseX < 312)) {
+      player.image = propArray[22];
+    }
+
     if(keyIsPressed){
       if(keyCode == LEFT_ARROW){
         player.x = player.x - speed;
@@ -45,34 +55,34 @@ function dorm() {
         player.y = player.y - speed;
       } else if (keyCode == DOWN_ARROW){
         player.y = player.y + speed;
-    }  
-  }
-
-  let mapOn = false;
-
-  if(keyIsPressed){
-    if(keyCode == BACKSPACE){
-      mapOn = true;
-    } else {
-      mapOn = false;
+      }  
     }
-  }
 
-  if(mapOn == true){
-    miniMap.draw();
-  }
+    let mapOn = false;
 
-  let QuadDist = dist(player.x, player.y, QuadZone.x + QuadZone.size / 2, QuadZone.y + QuadZone.size / 2);
-  if(QuadDist < 30) {
-    this.sceneManager.showScene( Quad );
-    player.x = 400;
-    player.y = 40;
-    QuadZone.y = 20;
-  }
+    if(keyIsPressed){
+      if(keyCode == BACKSPACE){
+        mapOn = true;
+      } else {
+        mapOn = false;
+      }
+    }
 
-  for(s of sprites){
-    s.draw();
-  }
+    if(mapOn == true){
+     miniMap.draw();
+    }
+
+    let QuadDist = dist(player.x, player.y, QuadZone.x + QuadZone.size / 2, QuadZone.y + QuadZone.size / 2);
+    if(QuadDist < 30) {
+      this.sceneManager.showScene( Quad );
+      player.x = 400;
+      player.y = 40;
+      QuadZone.y = 20;
+    }
+
+    for(s of sprites){
+      s.draw();
+    }
 
   }
 }
