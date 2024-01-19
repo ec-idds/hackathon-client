@@ -10,6 +10,8 @@ function dorm() {
     }
   };
 
+  let sprites = [];
+
   let miniMap = {
     x: 50,
     y: 50,
@@ -31,7 +33,11 @@ function dorm() {
 }; 
 
     this.setup = function () {
-
+    // canvas
+    createCanvas(500, 500);
+    for(let i = 0; i < 3; i++){
+      sprites.push(new Sprite(trashcan, 250 + i * 20, 5, 20, 20));
+    }
   }
   
   this.draw = function () {
@@ -73,5 +79,10 @@ function dorm() {
     player.x = 556;
     player.y = 30;
   }
+
+  for(s of sprites){
+    s.draw();
+  }
+
   }
 }
