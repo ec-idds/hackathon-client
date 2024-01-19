@@ -1,4 +1,14 @@
 function dorm() {
+    
+  let player = {
+    x: 350,
+    y: 600,
+    size: 40,
+    draw: function() {
+      fill('red');
+      ellipse(this.x, this.y, this.size, this.size);
+    }
+  };
 
   let sprites = [];
 
@@ -13,11 +23,11 @@ function dorm() {
   };
 
   let QuadZone = {
-  x: 440,
-  y: 20,
-  size: 40,
+  x: 350,
+  y: 580,
+  size: 70,
   draw: function() {
-    fill('red');
+    fill('black');
     rect(this.x, this.y, this.size, this.size);
   }
 }; 
@@ -31,9 +41,10 @@ function dorm() {
   }
   
   this.draw = function () {
-    background('green');
-    player.draw();
+    createCanvas(618, 619);
     QuadZone.draw();
+    image(stJuliesMap, 0, 0, 618, 619);
+    player.draw();
 
     if(keyIsPressed){
       if(keyCode == LEFT_ARROW){
@@ -51,7 +62,7 @@ function dorm() {
   let mapOn = false;
 
   if(keyIsPressed){
-    if(keyCode == BACKSPACE){
+    if(keyCode == SHIFT){
       mapOn = true;
     } else {
       mapOn = false;
@@ -65,9 +76,8 @@ function dorm() {
   let QuadDist = dist(player.x, player.y, QuadZone.x + QuadZone.size / 2, QuadZone.y + QuadZone.size / 2);
   if(QuadDist < 30) {
     this.sceneManager.showScene( Quad );
-    player.x = 400;
-    player.y = 40;
-    QuadZone.y = 20;
+    player.x = 556;
+    player.y = 30;
   }
 
   for(s of sprites){

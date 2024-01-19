@@ -7,14 +7,14 @@ function Lobby() {
 
     lobbyTimer = new GameTimer();
     lobbyTimer.start();
-    lobbyTimer.a = 30;
+    lobbyTimer.a = 1;
     lobbyTimer.boxX = width / 2 - 50;
     lobbyTimer.boxY = 180;
     lobbyTimer.text = 'Start in:';
 
     let gold = color(242, 185, 11);
     let darkblue = color(31, 75, 126);
-    let startButton = createButton("Press to Start");
+    startButton = createButton("Press to Start");
     startButton.position((width/2)-187,(height/2)-25);
     startButton.size(375,75);
     startButton.style('font-size', '50px');
@@ -68,6 +68,7 @@ function Lobby() {
 
     if (lobbyTimer.elapsed()) {
       this.sceneManager.showScene( Quad );
+      startButton.hide();
     }
 
   }

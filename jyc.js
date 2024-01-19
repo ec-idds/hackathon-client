@@ -13,11 +13,11 @@ let miniMap = {
   };
 
   let QuadZone = {
-  x: 400,
-  y: 400,
-  size: 40,
+  x: 1000,
+  y: 955,
+  size: 70,
   draw: function() {
-    fill('red');
+    fill('black');
     rect(this.x, this.y, this.size, this.size);
   }
 }; 
@@ -32,9 +32,10 @@ let miniMap = {
 
   
   this.draw = function () {
-    background('blue');
-    player.draw();
+    createCanvas(1386, 1014);
     QuadZone.draw();
+    image(JYCMap, 0, 0, 1386, 1014);
+    player.draw();
 
 
     if(keyIsPressed){
@@ -53,7 +54,7 @@ let miniMap = {
   let mapOn = false;
 
   if(keyIsPressed){
-    if(keyCode == BACKSPACE){
+    if(keyCode == SHIFT){
       mapOn = true;
     } else {
       mapOn = false;
@@ -65,11 +66,10 @@ let miniMap = {
   }
 
   let QuadDist = dist(player.x, player.y, QuadZone.x + QuadZone.size / 2, QuadZone.y + QuadZone.size / 2);
-  if(QuadDist < 30) {
+  if(QuadDist < 50) {
     this.sceneManager.showScene( Quad );
-    player.x = 360;
-    player.y = 420;
-    QuadZone.y = 400;
+    player.x = 480;
+    player.y = 0;
   }
 
   for(s of sprites){
