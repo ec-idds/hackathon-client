@@ -25,8 +25,8 @@ function dorm() {
     this.setup = function () {
     // canvas
     createCanvas(500, 500);
-    for(let i = 0; i < 3; i++){
-      sprites.push(new Sprite(trashcan, 250 + i * 20, 5, 20, 20));
+    for(let i = 20; i < 23; i++){
+      sprites.push(new Sprite(propArray[i], i * 25 - 250, 5, 20, 20));
     }
   }
   

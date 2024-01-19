@@ -2,8 +2,9 @@
 let pages = [Quad, JYC, dorm, Library, wilkens];
 let campus_bg;
 let lobby_bg;
-let trashcan;
 let player;
+
+let propArray = [];
 
 let speed = 3;
 let buttonClick;
@@ -48,7 +49,6 @@ let dodgeball;
 let bed;
 let plasticwb;
 let reusablewb;
-let buttonClick;
 
 function preload () {
   campus_bg = loadImage('PH.png');
@@ -100,11 +100,39 @@ function preload () {
 
 function setup () {
   createCanvas(400, 600);
-  player = new Sprite(trashcan, 100, 100, 30, 30, true);
+  player = new Sprite (trashcan, 100, 100, 30, 30, true);
   var mgr = new SceneManager();
     // mgr.bkImage = bkImage; // inject bkImage property
     mgr.wire();
     mgr.showScene( StartScreen );
+
+    propArray = [ 
+      trashcan,
+      squirrel,
+      blue_chair,
+      yellow_chair,
+      umbrella_chair,
+      tree1,
+      tree2,
+      tree3,
+      tree4,
+      beaker,
+      brain,
+      microscope,
+      plant1,
+      plant2,
+      plant3,
+      table1,
+      table2,
+      chair1,
+      chair2,
+      chair3,
+      chair4,
+      bed,
+      plasticwb,
+      reusablewb,
+      dodgeball,
+    ];
 }
 
 

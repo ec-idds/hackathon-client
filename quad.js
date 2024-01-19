@@ -59,8 +59,8 @@ function Quad() {
   this.setup = function () {
     // canvas
     createCanvas(windowWidth, windowHeight);
-    for(let i = 0; i < 3; i++){
-      sprites.push(new Sprite(trashcan, 250 + i * 20, 5, 20, 20));
+    for(let i = 0; i < 9; i++){
+      sprites.push(new Sprite(propArray[i], 200 + i * 20, 5, 20, 20));
     }
   }
 
