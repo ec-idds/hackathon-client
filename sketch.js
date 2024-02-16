@@ -55,7 +55,7 @@ let reusablewb;
 
 let music;
 
-function preload () {
+function preload() {
   libraryMap = loadImage('mapImages/libraryMap.png');
   quadMap = loadImage('mapImages/quadMap.png');
   JYCMap = loadImage('mapImages/JYCMap.png');
@@ -72,7 +72,7 @@ function preload () {
   walkingMus = loadSound('project_music/Walking.mp3');
 
   music = new MusicManager();
-  
+
   //sprites
   squirrel = loadImage('game_designs/quad/squirrel.png');
   trashcan = loadImage('game_designs/universal/Trashcan.png');
@@ -104,21 +104,11 @@ function preload () {
   reusablewb = loadImage('game_designs/universal/Rewaterbottle.png');
 }
 
-function setup () {
+function setup() {
   createCanvas(400, 600);
   player = new Sprite(trashcan, 100, 100, 30, 30, true);
   var mgr = new SceneManager();
-    // mgr.bkImage = bkImage; // inject bkImage property
-    mgr.wire();
-    mgr.showScene( StartScreen );
+  // mgr.bkImage = bkImage; // inject bkImage property
+  mgr.wire();
+  mgr.showScene(StartScreen);
 }
-
-
-
-
-
-// create an array of all the pages 
-// then create a variable to keep track of what page you're on 
-// identify what areas on the map are 'transporation zones'
-// when the sprite enters a transporation zone, 
-// alter the 'current' variable to match the corresponding map/page
