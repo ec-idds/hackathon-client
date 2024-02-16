@@ -3,11 +3,14 @@ function Lobby() {
   var lobbyTimer;
 
   this.setup = function () {
-    new Canvas()
+    new Canvas();
+
+    music.stopAll();
+    music.Lobby.loop();
 
     lobbyTimer = new GameTimer();
     lobbyTimer.start();
-    lobbyTimer.a = 1;
+    lobbyTimer.a = 90;
     lobbyTimer.boxX = width / 2 - 50;
     lobbyTimer.boxY = 180;
     lobbyTimer.text = 'Start in:';
@@ -15,23 +18,22 @@ function Lobby() {
     let gold = color(242, 185, 11);
     let darkblue = color(31, 75, 126);
     startButton = createButton("Press to Start");
-    startButton.position((width/2)-187,(height/2)-25);
-    startButton.size(375,75);
+    startButton.position((width / 2) - 187, (height / 2) - 25);
+    startButton.size(375, 75);
     startButton.style('font-size', '50px');
     startButton.style('background-color', gold);
     startButton.style('color', darkblue);
     startButton.style('font-family', "Pixelify Sans");
     startButton.style('border-color', darkblue);
-  
+
     startButton.mousePressed(() => {
       startButton.hide();
-      this.sceneManager.showScene( Quad );
+      this.sceneManager.showScene(Quad);
     });
-
   }
 
   this.draw = function () {
-
+    userStartAudio();
     image(lobby_bg, 0, 0, width, height);
     fill(31, 75, 126);
 
@@ -67,9 +69,8 @@ function Lobby() {
     lobbyTimer.draw();
 
     if (lobbyTimer.elapsed()) {
-      this.sceneManager.showScene( Quad );
+      this.sceneManager.showScene(Quad);
       startButton.hide();
     }
-
   }
 }

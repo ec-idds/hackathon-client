@@ -12,6 +12,7 @@
         "plugin:p5js/p5"
     ],
     "rules": {
-        "prefer-const": "off"
+        "prefer-const": "off",
+        "eqeqeq": ["error", "always"]
     }
 }

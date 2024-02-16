@@ -1,32 +1,32 @@
 class Sprite {
-    constructor (image, x, y, w, h, controllable) {
+    constructor(image, x, y, w, h, controllable) {
         this.image = image;
         this.x = x;
         this.y = y;
         this.w = w;
         this.h = h;
-        if(controllable === undefined){
+        if (controllable === undefined) {
             this.controllable = false;
         } else {
             this.controllable = controllable;
         }
     }
 
-    draw () {
+    draw() {
         image(this.image, this.x, this.y, this.w, this.h);
     }
 
-    keyIsPressed (keyCode) {
-        if(this.controllable != true) return
+    keyIsPressed(keyCode) {
+        if (this.controllable != true) return
 
-        if(keyCode == LEFT_ARROW){
+        if (keyCode === LEFT_ARROW) {
             this.x = this.x - speed;
-          } else if (keyCode == RIGHT_ARROW){
+        } else if (keyCode === RIGHT_ARROW) {
             this.x = this.x + speed;
-          }
-          if (keyCode == UP_ARROW){
+        }
+        if (keyCode === UP_ARROW) {
             this.y = this.y - speed;
-          } else if (keyCode == DOWN_ARROW){
+        } else if (keyCode === DOWN_ARROW) {
             this.y = this.y + speed;
         }
     }
