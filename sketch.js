@@ -77,7 +77,7 @@ function preload () {
   
   //sprites
   squirrel = loadImage('game_designs/quad/squirrel.png');
-  trashcan = loadImage('game_designs/universal/trashcan.png');
+  trashcan = loadImage('game_designs/universal/Trashcan.png');
   chair1 = loadImage('game_designs/universal/Chair1.png');
   chair2 = loadImage('game_designs/universal/Chair2.png');
   chair3 = loadImage('game_designs/universal/Chair3.png');
