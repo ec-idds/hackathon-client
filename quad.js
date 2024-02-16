@@ -57,11 +57,11 @@ function Quad() {
   };
 
   this.setup = function () {
-    quadMus.loop();
+    music.stopAll();
+    music.Quad.loop();
   }
 
   this.draw = function () {
-    userStartAudio();
     createCanvas(556, 619);
     image(quadMap, 0, 0, 556, 619);
     JYCZone.draw();

@@ -3,11 +3,14 @@ function Lobby() {
   var lobbyTimer;
 
   this.setup = function () {
-    new Canvas()
+    new Canvas();
+
+    music.stopAll();
+    music.Lobby.loop();
 
     lobbyTimer = new GameTimer();
     lobbyTimer.start();
-    lobbyTimer.a = 1;
+    lobbyTimer.a = 90;
     lobbyTimer.boxX = width / 2 - 50;
     lobbyTimer.boxY = 180;
     lobbyTimer.text = 'Start in:';
@@ -31,7 +34,7 @@ function Lobby() {
   }
 
   this.draw = function () {
-
+    userStartAudio();
     image(lobby_bg, 0, 0, width, height);
     fill(31, 75, 126);
 

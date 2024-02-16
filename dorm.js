@@ -31,7 +31,8 @@ function dorm() {
 }; 
 
     this.setup = function () {
-
+      music.stopAll();
+      music.StJulies.loop();
   }
   
   this.draw = function () {

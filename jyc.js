@@ -21,7 +21,8 @@ let miniMap = {
 }; 
 
     this.setup = function () {
-
+      music.stopAll();
+      music.JYC.loop();
   }
 
   

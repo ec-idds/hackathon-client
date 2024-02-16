@@ -32,7 +32,8 @@ function Library() {
 
 
     this.setup = function () {
-
+      music.stopAll();
+      music.Library.loop();
   }
   
   this.draw = function () {

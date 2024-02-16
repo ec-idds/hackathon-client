@@ -31,7 +31,8 @@ function wilkens() {
 }; 
 
     this.setup = function () {
-    
+      music.stopAll();
+      music.Wilkens.loop();
   }
   
   this.draw = function () {

@@ -53,6 +53,8 @@ let bed;
 let plasticwb;
 let reusablewb;
 
+let music;
+
 function preload () {
   libraryMap = loadImage('mapImages/libraryMap.png');
   quadMap = loadImage('mapImages/quadMap.png');
@@ -63,17 +65,13 @@ function preload () {
   lobby_bg = loadImage('ECQ.png');
   buttonClickSound = loadSound('project_music/ButtonClick.mp3');
   deathNoise = loadSound('project_music/DeathNoise.mp3');
-  stJuliesMus = loadSound('project_music/Dorm.mp3');
-  jycMusic = loadSound('project_music/JYC.mp3');
-  libraryMus = loadSound('project_music/Library.mp3');
   connectSound = loadSound('project_music/OnConnect.mp3');
   proxPing = loadSound('project_music/ProxPing.mp3');
-  quadMus = loadSound('project_music/Quad.mp3');
   tocatta = loadSound('project_music/Tocatta.mp3');
   victoryJam = loadSound('project_music/Victory.mp3');
   walkingMus = loadSound('project_music/Walking.mp3');
-  wilkensMus = loadSound('project_music/Wilkens.mp3');
-  lobbyMus = loadSound('project_music/Lobby.mp3');
+
+  music = new MusicManager();
   
   //sprites
   squirrel = loadImage('game_designs/quad/squirrel.png');
