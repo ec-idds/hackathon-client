@@ -57,10 +57,11 @@ function Quad() {
   };
 
   this.setup = function () {
-
+    quadMus.loop();
   }
 
   this.draw = function () {
+    userStartAudio();
     createCanvas(556, 619);
     image(quadMap, 0, 0, 556, 619);
     JYCZone.draw();
@@ -129,16 +130,12 @@ function Quad() {
             mapOn = true;
           } else {
             mapOn = false;
-          }
-          
+          } 
         }
-  
         if (mapOn == true) {
           miniMap.draw();
-        }
-      
+        } 
     }
-
   }
 
     // create an array of all the pages 
