@@ -1,6 +1,11 @@
 // create tunnel shaded area 
 // figure out how to implement movement of the shaded area 
 
+// create an abstract class character, with image, x, y, and speed properties. also need movement and draw methods
+// create a prop class, with a standard speed
+// create a seeker class, with a faster speed 
+
+
 function Seeker() {
 
   let seeker = {
