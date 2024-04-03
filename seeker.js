@@ -5,6 +5,12 @@
 // create a prop class, with a standard speed
 // create a seeker class, with a faster speed 
 
+// potential class idea 
+// class Seeker extends Character{
+//   constructor (x, y, speed, image){
+//     super (x, y, speed, image);
+//   }
+// }
 
 function Seeker() {
 
