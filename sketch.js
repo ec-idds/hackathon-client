@@ -106,8 +106,10 @@ function preload() {
 
 function setup() {
   createCanvas(400, 600);
-  
+
   let hider = new Prop (100, 100, 30, 30, true, 2, trashcan);
+
+  let seeker = new Seeker (50, 50, 30, 30, true, 4, reusablewb);
   
   // player = new Sprite(trashcan, 100, 100, 30, 30, true);
   var mgr = new SceneManager();
