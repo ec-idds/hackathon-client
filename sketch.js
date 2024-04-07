@@ -106,7 +106,10 @@ function preload() {
 
 function setup() {
   createCanvas(400, 600);
-  player = new Sprite(trashcan, 100, 100, 30, 30, true);
+  
+  let hider = new Prop (100, 100, 30, 30, true, 2, trashcan);
+  
+  // player = new Sprite(trashcan, 100, 100, 30, 30, true);
   var mgr = new SceneManager();
   // mgr.bkImage = bkImage; // inject bkImage property
   mgr.wire();

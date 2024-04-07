@@ -6,24 +6,26 @@
 // create a seeker class, with a faster speed 
 
 // potential class idea 
-// class Seeker extends Character{
-//   constructor (x, y, speed, image){
-//     super (x, y, speed, image);
-//   }
-// }
+class Seeker extends Character{
+  constructor (x, y, w, h, controllable, speed, image){
+    super(x, y, w, h, controllable, speed, image);
+  }
+}
+
+
 
 function Seeker() {
 
-  let seeker = {
-    x: 200,
-    y: 200,
-    size: 40,
-    draw: function () {
-      noStroke();
-      fill('orange');
-      ellipse(this.x, this.y, this.size, this.size);
-    }
-  }
+  // let seeker = {
+  //   x: 200,
+  //   y: 200,
+  //   size: 40,
+  //   draw: function () {
+  //     noStroke();
+  //     fill('orange');
+  //     ellipse(this.x, this.y, this.size, this.size);
+  //   }
+  // }
 
   let flashlightVision = {
     start: radians(230),
