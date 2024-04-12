@@ -6,7 +6,7 @@
 // create a seeker class, with a faster speed 
 
 // potential class idea 
-class Seeker extends Character{
+class Seeker extends Sprite {
   constructor (x, y, w, h, controllable, speed, image){
     super(x, y, w, h, controllable, speed, image);
   }

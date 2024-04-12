@@ -1,10 +1,11 @@
-class Sprite {
-    constructor(image, x, y, w, h, controllable) {
+class Sprite{
+    constructor(image, x, y, w, h, controllable, s) {
         this.image = image;
         this.x = x;
         this.y = y;
         this.w = w;
         this.h = h;
+        this.speed = s;
         if (controllable === undefined) {
             this.controllable = false;
         } else {
