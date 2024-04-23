@@ -17,18 +17,18 @@ class Sprite{
         image(this.image, this.x, this.y, this.w, this.h);
     }
 
-    keyIsPressed(keyCode) {
-        if (this.controllable != true) return
+    // keyIsPressed(keyCode) {
+    //     if (this.controllable != true) return
 
-        if (keyCode === LEFT_ARROW) {
-            this.x = this.x - speed;
-        } else if (keyCode === RIGHT_ARROW) {
-            this.x = this.x + speed;
-        }
-        if (keyCode === UP_ARROW) {
-            this.y = this.y - speed;
-        } else if (keyCode === DOWN_ARROW) {
-            this.y = this.y + speed;
-        }
-    }
+    //     if (keyCode === LEFT_ARROW) {
+    //         this.x = this.x - this.speed;
+    //     } else if (keyCode === RIGHT_ARROW) {
+    //         this.x = this.x + this.speed;
+    //     }
+    //     if (keyCode === UP_ARROW) {
+    //         this.y = this.y - this.speed;
+    //     } else if (keyCode === DOWN_ARROW) {
+    //         this.y = this.y + this.speed;
+    //     }
+    // }
 }

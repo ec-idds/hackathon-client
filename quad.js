@@ -77,14 +77,14 @@ function Quad() {
     // currently 
     if (keyIsPressed) {
       if (keyCode === LEFT_ARROW) {
-        player.x = player.x - 10;
+        player.x = player.x - player.speed;
       } else if (keyCode === RIGHT_ARROW) {
-        player.x = player.x + 10;
+        player.x = player.x + player.speed;
       }
       if (keyCode === UP_ARROW) {
-        player.y = player.y - 10;
+        player.y = player.y - player.speed;
       } else if (keyCode == DOWN_ARROW) {
-        player.y = player.y + 10;
+        player.y = player.y + player.speed;
       }
     }
 

@@ -44,14 +44,14 @@ function Library() {
 
     if (keyIsPressed) {
       if (keyCode === LEFT_ARROW) {
-        player.x = player.x - speed;
+        player.x = player.x - player.speed;
       } else if (keyCode === RIGHT_ARROW) {
-        player.x = player.x + speed;
+        player.x = player.x + player.speed;
       }
       if (keyCode === UP_ARROW) {
-        player.y = player.y - speed;
-      } else if (keyCode === DOWN_ARROW) {
-        player.y = player.y + speed;
+        player.y = player.y - player.speed;
+      } else if (keyCode == DOWN_ARROW) {
+        player.y = player.y + player.speed;
       }
     }
 
