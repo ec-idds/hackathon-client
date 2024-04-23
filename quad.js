@@ -1,10 +1,12 @@
 function Quad() {
 
-  let x = 200;
-  let y = 200;
-  let d = 40;
+  // let x = 200;
+  // let y = 200;
+  // let d = 40;
 
-  let mapOn = false;
+  // let mapOn = false;
+
+  // warps
 
   let JYCZone = {
     x: 380,
@@ -46,48 +48,56 @@ function Quad() {
     }
   };
 
-  let miniMap = {
-    x: 50,
-    y: 50,
-    size: 400,
-    draw: function () {
-      fill('orange');
-      rect(this.x, this.y, this.size, this.size);
-    }
-  };
+  // let miniMap = {
+  //   x: 50,
+  //   y: 50,
+  //   size: 400,
+  //   draw: function () {
+  //     fill('orange');
+  //     rect(this.x, this.y, this.size, this.size);
+  //   }
+  // };
 
   this.setup = function () {
-    music.stopAll();
-    music.Quad.loop();
+    // music stuff
+    // music.stopAll();
+    // music.Quad.loop();
   }
 
   this.draw = function () {
     createCanvas(556, 619);
+    // background image
     image(quadMap, 0, 0, 556, 619);
+    // warp zones
     JYCZone.draw();
     dormZone.draw();
     libraryZone.draw();
     wilkensZone.draw();
 
+    // currently 
     if (keyIsPressed) {
       if (keyCode === LEFT_ARROW) {
-        player.x = player.x - 3;
+        player.x = player.x - 10;
       } else if (keyCode === RIGHT_ARROW) {
-        player.x = player.x + 3;
+        player.x = player.x + 10;
       }
       if (keyCode === UP_ARROW) {
-        player.y = player.y - 3;
+        player.y = player.y - 10;
       } else if (keyCode == DOWN_ARROW) {
-        player.y = player.y + 3;
+        player.y = player.y + 10;
       }
     }
 
-    let mapOn = false;
+    // let mapOn = false;
 
-    JYCZone.draw();
-    dormZone.draw();
-    libraryZone.draw();
-    wilkensZone.draw();
+    // drawn twice for some reason
+
+    // JYCZone.draw();
+    // dormZone.draw();
+    // libraryZone.draw();
+    // wilkensZone.draw();
+
+    // currently how warps are working
 
     let jycDist = dist(player.x, player.y, JYCZone.x + JYCZone.size / 2, JYCZone.y + JYCZone.size / 2);
     if (jycDist < 37) {
@@ -121,20 +131,24 @@ function Quad() {
       //wilkensZone.y = 420;
     }
 
+    // drawing constructed character
+
     player.draw();
 
-    if (keyIsPressed) {
-      player.keyIsPressed(keyCode);
+    // minimap stuff
 
-      if (keyCode === SHIFT) {
-        mapOn = true;
-      } else {
-        mapOn = false;
-      }
-    }
-    if (mapOn === true) {
-      miniMap.draw();
-    }
+    // if (keyIsPressed) {
+    //   player.keyIsPressed(keyCode);
+
+    //   if (keyCode === SHIFT) {
+    //     mapOn = true;
+    //   } else {
+    //     mapOn = false;
+    //   }
+    // }
+    // if (mapOn === true) {
+    //   miniMap.draw();
+    // }
   }
 }
 

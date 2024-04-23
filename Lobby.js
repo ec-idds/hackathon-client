@@ -5,8 +5,8 @@ function Lobby() {
   this.setup = function () {
     new Canvas();
 
-    music.stopAll();
-    music.Lobby.loop();
+    // music.stopAll();
+    // music.Lobby.loop();
 
     lobbyTimer = new GameTimer();
     lobbyTimer.start();
@@ -33,7 +33,7 @@ function Lobby() {
   }
 
   this.draw = function () {
-    userStartAudio();
+    // userStartAudio();
     image(lobby_bg, 0, 0, width, height);
     fill(31, 75, 126);
 

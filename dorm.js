@@ -1,24 +1,24 @@
 function dorm() {
 
-  let player = {
-    x: 350,
-    y: 600,
-    size: 40,
-    draw: function () {
-      fill('red');
-      ellipse(this.x, this.y, this.size, this.size);
-    }
-  };
+  // let player = {
+  //   x: 350,
+  //   y: 600,
+  //   size: 40,
+  //   draw: function () {
+  //     fill('red');
+  //     ellipse(this.x, this.y, this.size, this.size);
+  //   }
+  // };
 
-  let miniMap = {
-    x: 50,
-    y: 50,
-    size: 400,
-    draw: function () {
-      fill('orange');
-      rect(this.x, this.y, this.size, this.size);
-    }
-  };
+  // let miniMap = {
+  //   x: 50,
+  //   y: 50,
+  //   size: 400,
+  //   draw: function () {
+  //     fill('orange');
+  //     rect(this.x, this.y, this.size, this.size);
+  //   }
+  // };
 
   let QuadZone = {
     x: 350,
@@ -31,8 +31,8 @@ function dorm() {
   };
 
   this.setup = function () {
-    music.stopAll();
-    music.StJulies.loop();
+    // music.stopAll();
+    // music.StJulies.loop();
   }
 
   this.draw = function () {
@@ -54,25 +54,26 @@ function dorm() {
       }
     }
 
-    let mapOn = false;
+    // let mapOn = false;
 
-    if (keyIsPressed) {
-      if (keyCode === SHIFT) {
-        mapOn = true;
-      } else {
-        mapOn = false;
-      }
-    }
+    // if (keyIsPressed) {
+    //   if (keyCode === SHIFT) {
+    //     mapOn = true;
+    //   } else {
+    //     mapOn = false;
+    //   }
+    // }
 
-    if (mapOn === true) {
-      miniMap.draw();
-    }
+    // if (mapOn === true) {
+    //   miniMap.draw();
+    // }
 
     let QuadDist = dist(player.x, player.y, QuadZone.x + QuadZone.size / 2, QuadZone.y + QuadZone.size / 2);
     if (QuadDist < 30) {
       this.sceneManager.showScene(Quad);
-      player.x = 556;
-      player.y = 30;
+      // i like this spot
+      player.x = 500;
+      player.y = 60;
     }
   }
 }
