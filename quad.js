@@ -7,6 +7,7 @@ function Quad() {
   // let mapOn = false;
 
   // warps
+  // could make classes for zones
 
   let JYCZone = {
     x: 380,
