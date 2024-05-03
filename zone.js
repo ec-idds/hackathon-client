@@ -1,4 +1,4 @@
-class Zone {
+class Zone{
     constructor(x, y, s, c){
         this.x = x;
         this.y = y;
