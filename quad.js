@@ -39,15 +39,18 @@ function Quad() {
     }
   };
 
-  let libraryZone = {
-    x: - 30,
-    y: 35,
-    size: 70,
-    draw: function () {
-      fill('pink');
-      rect(this.x, this.y, this.size, this.size);
-    }
-  };
+  // let libraryZone = {
+  //   x: - 30,
+  //   y: 35,
+  //   size: 70,
+  //   draw: function () {
+  //     fill('pink');
+  //     rect(this.x, this.y, this.size, this.size);
+  //   }
+  // };
+
+  libraryZone = new Zone (-30, 35, 70, 'pink');
+  libraryZone.zone();
 
   // let miniMap = {
   //   x: 50,

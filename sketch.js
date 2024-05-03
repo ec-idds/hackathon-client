@@ -107,7 +107,7 @@ function preload() {
 function setup() {
   createCanvas(400, 600);
 
-  player = new Sprite (trashcan, 100, 100, 30, 30, true, 10);
+  player = new Sprite (trashcan, 100, 100, 30, 30, true, 1.0);
 
   // seeker = new Seeker (50, 50, 30, 30, true, 4, reusablewb);
   
@@ -116,4 +116,19 @@ function setup() {
   // mgr.bkImage = bkImage; // inject bkImage property
   mgr.wire();
   mgr.showScene(StartScreen);
+}
+
+function draw() {
+  // if (keyIsPressed) {
+  //   if (keyCode === LEFT_ARROW) {
+  //     player.x = player.x - player.speed;
+  //   } else if (keyCode === RIGHT_ARROW) {
+  //     player.x = player.x + player.speed;
+  //   }
+  //   if (keyCode === UP_ARROW) {
+  //     player.y = player.y - player.speed;
+  //   } else if (keyCode == DOWN_ARROW) {
+  //     player.y = player.y + player.speed;
+  //   }
+  // }
 }
