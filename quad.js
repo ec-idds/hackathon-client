@@ -16,6 +16,9 @@ function Quad() {
     // music stuff
     // music.stopAll();
     // music.Quad.loop();
+    for(let i = 0; i < 9; i++){
+      sprites.push(new Sprite(propArray[i], 200 + i * 20, 5, 20, 20));
+    }
   }
 
   this.draw = function () {
@@ -43,6 +46,38 @@ function Quad() {
       } else if (keyCode == DOWN_ARROW) {
         player.y = player.y + player.speed;
       }
+    }
+
+    for (s of sprites) {
+      s.draw();
+    }
+
+    if (mouseIsPressed && (mouseY < 24) && (mouseY > 3) && (mouseX > 201) && (mouseX < 216)) {
+      player.image = propArray[0];
+    }
+    if (mouseIsPressed && (mouseY < 24) && (mouseY > 3) && (mouseX > 219) && (mouseX < 237)) {
+      player.image = propArray[1];
+    }
+    if (mouseIsPressed && (mouseY < 24) && (mouseY > 3) && (mouseX > 238) && (mouseX < 257)) {
+      player.image = propArray[2];
+    }
+    if (mouseIsPressed && (mouseY < 24) && (mouseY > 3) && (mouseX > 261) && (mouseX < 277)) {
+      player.image = propArray[3];
+    }
+    if (mouseIsPressed && (mouseY < 24) && (mouseY > 3) && (mouseX > 280) && (mouseX < 299)) {
+      player.image = propArray[4];
+    }
+    if (mouseIsPressed && (mouseY < 24) && (mouseY > 3) && (mouseX > 300) && (mouseX < 316)) {
+      player.image = propArray[5];
+    }
+    if (mouseIsPressed && (mouseY < 24) && (mouseY > 3) && (mouseX > 320) && (mouseX < 339)) {
+      player.image = propArray[6];
+    }
+    if (mouseIsPressed && (mouseY < 24) && (mouseY > 3) && (mouseX > 342) && (mouseX < 355)) {
+      player.image = propArray[7];
+    }
+    if (mouseIsPressed && (mouseY < 24) && (mouseY > 3) && (mouseX > 361) && (mouseX < 376)) {
+      player.image = propArray[8];
     }
 
     // let mapOn = false;

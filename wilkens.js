@@ -13,6 +13,9 @@ function wilkens() {
   this.setup = function () {
     // music.stopAll();
     // music.Wilkens.loop();
+    for(let i = 9; i < 12; i++){
+      sprites.push(new Sprite(propArray[i], 50 + i * 20, 5, 20, 20));
+    }
   }
 
   this.draw = function () {
@@ -32,6 +35,16 @@ function wilkens() {
       } else if (keyCode == DOWN_ARROW) {
         player.y = player.y + player.speed;
       }
+    }
+
+    if (mouseIsPressed && (mouseY < 24) && (mouseY > 3) && (mouseX > 232) && (mouseX < 246)) {
+      player.image = propArray[9];
+    }
+    if (mouseIsPressed && (mouseY < 24) && (mouseY > 3) && (mouseX > 250) && (mouseX < 265)) {
+      player.image = propArray[10];
+    }
+    if (mouseIsPressed && (mouseY < 24) && (mouseY > 3) && (mouseX > 268) && (mouseX < 280)) {
+      player.image = propArray[11];
     }
 
     // let mapOn = false;

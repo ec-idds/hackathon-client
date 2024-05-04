@@ -13,6 +13,9 @@ function dorm() {
   this.setup = function () {
     // music.stopAll();
     // music.StJulies.loop();
+    for(let i = 20; i < 23; i++){
+      sprites.push(new Sprite(propArray[i], i * 25 - 250, 5, 20, 20));
+    }
   }
 
   this.draw = function () {
@@ -33,6 +36,16 @@ function dorm() {
       } else if (keyCode == DOWN_ARROW) {
         player.y = player.y + player.speed;
       }
+    }
+
+    if (mouseIsPressed && (mouseY < 24) && (mouseY > 3) && (mouseX > 250) && (mouseX < 270)) {
+      player.image = propArray[20];
+    }
+    if (mouseIsPressed && (mouseY < 24) && (mouseY > 3) && (mouseX > 273) && (mouseX < 293)) {
+      player.image = propArray[21];
+    }
+    if (mouseIsPressed && (mouseY < 24) && (mouseY > 3) && (mouseX > 305) && (mouseX < 312)) {
+      player.image = propArray[22];
     }
 
     // let mapOn = false;

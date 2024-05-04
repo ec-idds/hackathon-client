@@ -1,5 +1,7 @@
 
 let pages = [Quad, JYC, dorm, Library, wilkens];
+let propArray = [];
+let sprites = [];
 let campus_bg;
 let lobby_bg;
 let trashcan;
@@ -106,6 +108,35 @@ function preload() {
 
 function setup() {
   createCanvas(400, 600);
+
+  // sprite array that was created months ago
+  propArray = [ 
+    trashcan,
+    squirrel,
+    blue_chair,
+    yellow_chair,
+    umbrella_chair,
+    tree1,
+    tree2,
+    tree3,
+    tree4,
+    beaker,
+    brain,
+    microscope,
+    plant1,
+    plant2,
+    plant3,
+    table1,
+    table2,
+    chair1,
+    chair2,
+    chair3,
+    chair4,
+    bed,
+    plasticwb,
+    reusablewb,
+    dodgeball,
+  ];
 
   // character creation
   player = new Sprite (trashcan, 100, 100, 30, 30, true, 5.0);
