@@ -1,5 +1,6 @@
 function dorm() {
 
+  // creates a new array of sprites
   let sprites = [];
 
   // let miniMap = {
@@ -15,6 +16,8 @@ function dorm() {
   this.setup = function () {
     // music.stopAll();
     // music.StJulies.loop();
+
+    // pushes sprites into the sprite array
     for(let i = 20; i < 23; i++){
       sprites.push(new Sprite(propArray[i], i * 25 - 250, 5, 20, 20));
     }
@@ -40,10 +43,12 @@ function dorm() {
       }
     }
 
+    // draws the sprites
     for (s of sprites) {
       s.draw();
     }
 
+    // what allows for the props to change image
     if (mouseIsPressed && (mouseY < 24) && (mouseY > 3) && (mouseX > 250) && (mouseX < 270)) {
       player.image = propArray[20];
     }

@@ -1,5 +1,6 @@
 function Quad() {
 
+  // creates a new array of sprites
   let sprites = [];
 
   // let mapOn = false;
@@ -18,6 +19,8 @@ function Quad() {
     // music stuff
     // music.stopAll();
     // music.Quad.loop();
+
+    // pushes sprites into the sprite array
     for(let i = 0; i < 9; i++){
       sprites.push(new Sprite(propArray[i], 200 + i * 20, 5, 20, 20));
     }
@@ -50,10 +53,12 @@ function Quad() {
       }
     }
 
+    // draws the sprites
     for (s of sprites) {
       s.draw();
     }
 
+    // what allows for the props to change image
     if (mouseIsPressed && (mouseY < 24) && (mouseY > 3) && (mouseX > 201) && (mouseX < 216)) {
       player.image = propArray[0];
     }

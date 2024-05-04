@@ -1,5 +1,6 @@
 function wilkens() {
 
+  // creates a new array of sprites
   let sprites = [];
 
   // let miniMap = {
@@ -15,6 +16,8 @@ function wilkens() {
   this.setup = function () {
     // music.stopAll();
     // music.Wilkens.loop();
+
+    // pushes sprites into the sprite array
     for(let i = 9; i < 12; i++){
       sprites.push(new Sprite(propArray[i], 50 + i * 20, 5, 20, 20));
     }
@@ -39,10 +42,12 @@ function wilkens() {
       }
     }
 
+    // draws the sprites
     for (s of sprites) {
       s.draw();
     }
 
+    // what allows for the props to change image
     if (mouseIsPressed && (mouseY < 24) && (mouseY > 3) && (mouseX > 232) && (mouseX < 246)) {
       player.image = propArray[9];
     }

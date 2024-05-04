@@ -1,5 +1,6 @@
 function Library() {
 
+  // creates a new array of sprites
   let sprites = [];
 
   // let miniMap = {
@@ -15,6 +16,8 @@ function Library() {
   this.setup = function () {
     // music.stopAll();
     // music.Library.loop();
+
+    // pushes sprites into the sprite array
     for(let i = 12; i < 21; i++){
       sprites.push(new Sprite(propArray[i], 25 + i * 20, 5, 20, 20));
     }
@@ -39,10 +42,12 @@ function Library() {
       }
     }
 
+    // draws the sprites
     for (s of sprites) {
       s.draw();
     }
 
+    // what allows for the props to change image
     if (mouseIsPressed && (mouseY < 24) && (mouseY > 3) && (mouseX > 290) && (mouseX < 305)) {
       player.image = propArray[12];
     }
