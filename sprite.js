@@ -1,3 +1,4 @@
+// character class
 class Sprite{
     constructor(image, x, y, w, h, controllable, s) {
         this.image = image;

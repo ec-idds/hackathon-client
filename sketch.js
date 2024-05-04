@@ -107,19 +107,22 @@ function preload() {
 function setup() {
   createCanvas(400, 600);
 
+  // character creation
   player = new Sprite (trashcan, 100, 100, 30, 30, true, 5.0);
 
+  // zone creations for quad
   JYCZone = new Zone (380, 20, 70, 'blue');
   dormZone = new Zone (516, 50, 70, 'green');
   wilkensZone = new Zone (-30, 580, 70, 'yellow');
   libraryZone = new Zone (-30, 35, 70, 'pink');
 
+  // zone creations for the 4 side maps
   QuadJYCZone = new Zone (1050, 890, 120, 'red');
   QuadDormZone = new Zone (322, 558, 50, 'red');
   QuadWilkensZone = new Zone (410, 550, 40, 'red');
   QuadLibraryZone = new Zone (385, 270, 120, 'red');
 
-  // displays
+  // displays (not being used atm)
   quadDisplay = new Display (556, 619, quadMap);
   JYCDisplay = new Display (1386, 1014, JYCMap);
   dormDisplay = new Display (618, 619, stJuliesMap);
@@ -138,19 +141,7 @@ function setup() {
   mgr.showScene(StartScreen);
 }
 
+// does nothing atm
 function draw() {
-  fill ('blue');
-  rect(width/2, height/2, 100, 100);
-  // if (keyIsPressed) {
-  //   if (keyCode === LEFT_ARROW) {
-  //     player.x = player.x - player.speed;
-  //   } else if (keyCode === RIGHT_ARROW) {
-  //     player.x = player.x + player.speed;
-  //   }
-  //   if (keyCode === UP_ARROW) {
-  //     player.y = player.y - player.speed;
-  //   } else if (keyCode == DOWN_ARROW) {
-  //     player.y = player.y + player.speed;
-  //   }
-  // }
+  
 }
