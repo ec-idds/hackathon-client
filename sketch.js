@@ -108,7 +108,7 @@ function preload() {
 function setup() {
   createCanvas(400, 600);
 
-  // sprite array that was created months ago
+  // long lost array of props
   propArray = [ 
     trashcan,
     squirrel,
@@ -162,9 +162,6 @@ function setup() {
   // array of displays (not being used atm)
   displays = [quadDisplay, JYCDisplay, dormDisplay, wilkensDisplay, libraryDisplay];
 
-  // seeker = new Seeker (50, 50, 30, 30, true, 4, reusablewb);
-  
-  // player = new Sprite(trashcan, 100, 100, 30, 30, true);
   var mgr = new SceneManager();
   // mgr.bkImage = bkImage; // inject bkImage property
   mgr.wire();
