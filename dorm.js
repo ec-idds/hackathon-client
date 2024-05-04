@@ -1,15 +1,5 @@
 function dorm() {
 
-  // let player = {
-  //   x: 350,
-  //   y: 600,
-  //   size: 40,
-  //   draw: function () {
-  //     fill('red');
-  //     ellipse(this.x, this.y, this.size, this.size);
-  //   }
-  // };
-
   // let miniMap = {
   //   x: 50,
   //   y: 50,
@@ -20,16 +10,6 @@ function dorm() {
   //   }
   // };
 
-  let QuadZone = {
-    x: 350,
-    y: 580,
-    size: 70,
-    draw: function () {
-      fill('black');
-      rect(this.x, this.y, this.size, this.size);
-    }
-  };
-
   this.setup = function () {
     // music.stopAll();
     // music.StJulies.loop();
@@ -37,8 +17,9 @@ function dorm() {
 
   this.draw = function () {
     createCanvas(618, 619);
-    QuadZone.draw();
+    // QuadZone.draw();
     image(stJuliesMap, 0, 0, 618, 619);
+    QuadDormZone.zone();
     player.draw();
 
     if (keyIsPressed) {
@@ -68,7 +49,7 @@ function dorm() {
     //   miniMap.draw();
     // }
 
-    let QuadDist = dist(player.x, player.y, QuadZone.x + QuadZone.size / 2, QuadZone.y + QuadZone.size / 2);
+    let QuadDist = dist(player.x, player.y, QuadDormZone.x + QuadDormZone.size / 2, QuadDormZone.y + QuadDormZone.size / 2);
     if (QuadDist < 30) {
       this.sceneManager.showScene(Quad);
       // i like this spot

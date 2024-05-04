@@ -10,16 +10,6 @@ function JYC() {
   //   }
   // };
 
-  let QuadZone = {
-    x: 1000,
-    y: 955,
-    size: 70,
-    draw: function () {
-      fill('black');
-      rect(this.x, this.y, this.size, this.size);
-    }
-  };
-
   this.setup = function () {
     // music.stopAll();
     // music.JYC.loop();
@@ -28,8 +18,8 @@ function JYC() {
 
   this.draw = function () {
     createCanvas(1386, 1014);
-    QuadZone.draw();
     image(JYCMap, 0, 0, 1386, 1014);
+    QuadJYCZone.zone();
     player.draw();
 
 
@@ -60,7 +50,7 @@ function JYC() {
     //   miniMap.draw();
     // }
 
-    let QuadDist = dist(player.x, player.y, QuadZone.x + QuadZone.size / 2, QuadZone.y + QuadZone.size / 2);
+    let QuadDist = dist(player.x, player.y, QuadJYCZone.x + QuadJYCZone.size / 2, QuadJYCZone.y + QuadJYCZone.size / 2);
     if (QuadDist < 50) {
       this.sceneManager.showScene(Quad);
       player.x = 480;

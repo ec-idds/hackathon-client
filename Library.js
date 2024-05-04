@@ -1,15 +1,5 @@
 function Library() {
 
-  // let player = {
-  //   x: 420,
-  //   y: 335,
-  //   size: 40,
-  //   draw: function () {
-  //     fill('red');
-  //     ellipse(this.x, this.y, this.size, this.size);
-  //   }
-  // };
-
   // let miniMap = {
   //   x: 50,
   //   y: 50,
@@ -19,18 +9,7 @@ function Library() {
   //     rect(this.x, this.y, this.size, this.size);
   //   }
   // };
-
-  let QuadZone = {
-    x: 420,
-    y: 335,
-    size: 70,
-    draw: function () {
-      fill('black');
-      rect(this.x, this.y, this.size, this.size);
-    }
-  };
-
-
+  
   this.setup = function () {
     // music.stopAll();
     // music.Library.loop();
@@ -38,8 +17,8 @@ function Library() {
 
   this.draw = function () {
     createCanvas(1366, 1026);
-    QuadZone.draw();
     image(libraryMap, 0, 0, 1366, 1026);
+    QuadLibraryZone.zone();
     player.draw();
 
     if (keyIsPressed) {
@@ -69,7 +48,7 @@ function Library() {
     //   miniMap.draw();
     // }
 
-    let QuadDist = dist(player.x, player.y, QuadZone.x + QuadZone.size / 2, QuadZone.y + QuadZone.size / 2);
+    let QuadDist = dist(player.x, player.y, QuadLibraryZone.x + QuadLibraryZone.size / 2, QuadLibraryZone.y + QuadLibraryZone.size / 2);
     if (QuadDist < 50) {
       this.sceneManager.showScene(Quad);
       // i like this spot

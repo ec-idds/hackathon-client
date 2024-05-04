@@ -108,11 +108,16 @@ function setup() {
   createCanvas(400, 600);
 
   player = new Sprite (trashcan, 100, 100, 30, 30, true, 5.0);
-  
+
   JYCZone = new Zone (380, 20, 70, 'blue');
   dormZone = new Zone (516, 50, 70, 'green');
   wilkensZone = new Zone (-30, 580, 70, 'yellow');
   libraryZone = new Zone (-30, 35, 70, 'pink');
+
+  QuadJYCZone = new Zone (1000, 955, 70, 'black');
+  QuadDormZone = new Zone (350, 580, 70, 'black');
+  QuadWilkensZone = new Zone (465, 595, 70, 'black');
+  QuadLibraryZone = new Zone (420, 335, 70, 'black');
 
   quadDisplay = new Display (556, 619, quadMap);
   JYCDisplay = new Display (1386, 1014, JYCMap);

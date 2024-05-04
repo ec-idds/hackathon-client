@@ -1,15 +1,5 @@
 function wilkens() {
 
-  // let player = {
-  //   x: 465,
-  //   y: 595,
-  //   size: 40,
-  //   draw: function () {
-  //     fill('red');
-  //     ellipse(this.x, this.y, this.size, this.size);
-  //   }
-  // };
-
   // let miniMap = {
   //   x: 50,
   //   y: 50,
@@ -20,16 +10,6 @@ function wilkens() {
   //   }
   // };
 
-  let QuadZone = {
-    x: 465,
-    y: 595,
-    size: 70,
-    draw: function () {
-      fill('black');
-      rect(this.x, this.y, this.size, this.size);
-    }
-  };
-
   this.setup = function () {
     // music.stopAll();
     // music.Wilkens.loop();
@@ -37,8 +17,9 @@ function wilkens() {
 
   this.draw = function () {
     createCanvas(475, 619);
-    QuadZone.draw();
+    // QuadZone.draw();
     image(wilkensMap, 0, 0, 475, 619);
+    QuadWilkensZone.zone();
     player.draw();
 
     if (keyIsPressed) {
@@ -68,7 +49,7 @@ function wilkens() {
     //   miniMap.draw();
     // }
 
-    let QuadDist = dist(player.x, player.y, QuadZone.x + QuadZone.size / 2, QuadZone.y + QuadZone.size / 2);
+    let QuadDist = dist(player.x, player.y, QuadWilkensZone.x + QuadWilkensZone.size / 2, QuadWilkensZone.y + QuadWilkensZone.size / 2);
     if (QuadDist < 50) {
       this.sceneManager.showScene(Quad);
       // i like this spot
