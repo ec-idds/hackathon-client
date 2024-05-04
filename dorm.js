@@ -1,5 +1,7 @@
 function dorm() {
 
+  let sprites = [];
+
   // let miniMap = {
   //   x: 50,
   //   y: 50,
@@ -36,6 +38,10 @@ function dorm() {
       } else if (keyCode == DOWN_ARROW) {
         player.y = player.y + player.speed;
       }
+    }
+
+    for (s of sprites) {
+      s.draw();
     }
 
     if (mouseIsPressed && (mouseY < 24) && (mouseY > 3) && (mouseX > 250) && (mouseX < 270)) {

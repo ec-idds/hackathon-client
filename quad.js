@@ -1,5 +1,7 @@
 function Quad() {
 
+  let sprites = [];
+
   // let mapOn = false;
 
   // let miniMap = {

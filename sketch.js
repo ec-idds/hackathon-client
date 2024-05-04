@@ -1,7 +1,6 @@
 
 let pages = [Quad, JYC, dorm, Library, wilkens];
 let propArray = [];
-let sprites = [];
 let campus_bg;
 let lobby_bg;
 let trashcan;
