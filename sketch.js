@@ -108,7 +108,7 @@ function setup() {
   createCanvas(400, 600);
 
   player = new Sprite (trashcan, 100, 100, 30, 30, true, 5.0);
-  // libraryZone = new Zone (-30, 35, 70, 'pink');
+  libraryZone = new Zone (-30, 35, 70, 'pink');
 
   // seeker = new Seeker (50, 50, 30, 30, true, 4, reusablewb);
   

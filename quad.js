@@ -39,17 +39,15 @@ function Quad() {
     }
   };
 
-  let libraryZone = {
-    x: - 30,
-    y: 35,
-    size: 70,
-    draw: function () {
-      fill('pink');
-      rect(this.x, this.y, this.size, this.size);
-    }
-  };
-
-  // libraryZone.zone();
+  // let libraryZone = {
+  //   x: - 30,
+  //   y: 35,
+  //   size: 70,
+  //   draw: function () {
+  //     fill('pink');
+  //     rect(this.x, this.y, this.size, this.size);
+  //   }
+  // };
 
   // let miniMap = {
   //   x: 50,
@@ -74,7 +72,8 @@ function Quad() {
     // warp zones
     JYCZone.draw();
     dormZone.draw();
-    libraryZone.draw();
+    libraryZone.zone();
+    // libraryZone.draw();
     wilkensZone.draw();
 
     // currently 
