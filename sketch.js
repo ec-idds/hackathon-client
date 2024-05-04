@@ -108,7 +108,19 @@ function setup() {
   createCanvas(400, 600);
 
   player = new Sprite (trashcan, 100, 100, 30, 30, true, 5.0);
+  
+  JYCZone = new Zone (380, 20, 70, 'blue');
+  dormZone = new Zone (516, 50, 70, 'green');
+  wilkensZone = new Zone (-30, 580, 70, 'yellow');
   libraryZone = new Zone (-30, 35, 70, 'pink');
+
+  quadDisplay = new Display (556, 619, quadMap);
+  JYCDisplay = new Display (1386, 1014, JYCMap);
+  dormDisplay = new Display (618, 619, stJuliesMap);
+  wilkensDisplay = new Display (475, 619, wilkensMap);
+  libraryDisplay = new Display (1366, 1026, libraryMap);
+
+  displays = [quadDisplay, JYCDisplay, dormDisplay, wilkensDisplay, libraryDisplay];
 
   // seeker = new Seeker (50, 50, 30, 30, true, 4, reusablewb);
   

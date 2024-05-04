@@ -9,35 +9,35 @@ function Quad() {
   // warps
   // could make classes for zones
 
-  let JYCZone = {
-    x: 380,
-    y: 20,
-    size: 70,
-    draw: function () {
-      fill('blue');
-      rect(this.x, this.y, this.size, this.size);
-    }
-  };
+  // let JYCZone = {
+  //   x: 380,
+  //   y: 20,
+  //   size: 70,
+  //   draw: function () {
+  //     fill('blue');
+  //     rect(this.x, this.y, this.size, this.size);
+  //   }
+  // };
 
-  let dormZone = {
-    x: 516,
-    y: 50,
-    size: 70,
-    draw: function () {
-      fill('green');
-      rect(this.x, this.y, this.size, this.size);
-    }
-  };
+  // let dormZone = {
+  //   x: 516,
+  //   y: 50,
+  //   size: 70,
+  //   draw: function () {
+  //     fill('green');
+  //     rect(this.x, this.y, this.size, this.size);
+  //   }
+  // };
 
-  let wilkensZone = {
-    x: - 30,
-    y: 580,
-    size: 70,
-    draw: function () {
-      fill('yellow');
-      rect(this.x, this.y, this.size, this.size);
-    }
-  };
+  // let wilkensZone = {
+  //   x: - 30,
+  //   y: 580,
+  //   size: 70,
+  //   draw: function () {
+  //     fill('yellow');
+  //     rect(this.x, this.y, this.size, this.size);
+  //   }
+  // };
 
   // let libraryZone = {
   //   x: - 30,
@@ -70,11 +70,14 @@ function Quad() {
     // background image
     image(quadMap, 0, 0, 556, 619);
     // warp zones
-    JYCZone.draw();
-    dormZone.draw();
+    // JYCZone.draw();
+    // dormZone.draw();
+    JYCZone.zone();
+    dormZone.zone();
+    wilkensZone.zone();
     libraryZone.zone();
     // libraryZone.draw();
-    wilkensZone.draw();
+    // wilkensZone.draw();
 
     // currently 
     if (keyIsPressed) {
