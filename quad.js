@@ -52,33 +52,21 @@ function Quad() {
     let jycDist = dist(player.x, player.y, JYCZone.x + JYCZone.size / 2, JYCZone.y + JYCZone.size / 2);
     if (jycDist < 37) {
       this.sceneManager.showScene(JYC);
-      // player.x = 1100;
-      // player.y = 955;
-      //JYCZone.y = 400;
     }
 
     let dormDist = dist(player.x, player.y, dormZone.x + dormZone.size / 2, dormZone.y + dormZone.size / 2);
     if (dormDist < 50) {
       this.sceneManager.showScene(dorm);
-      // player.x = 350;
-      // player.y = 580;
-      //dormZone.y = 20;
     }
 
     let libraryDist = dist(player.x, player.y, libraryZone.x + libraryZone.size / 2, libraryZone.y + libraryZone.size / 2);
     if (libraryDist < 50) {
       this.sceneManager.showScene(Library);
-      // player.x = 420;
-      // player.y = 335;
-      //libraryZone.y = 20;
     }
 
     let wilkensDist = dist(player.x, player.y, wilkensZone.x + wilkensZone.size / 2, wilkensZone.y + wilkensZone.size / 2);
     if (wilkensDist < 50) {
       this.sceneManager.showScene(wilkens);
-      // player.x = 465;
-      // player.y = 595;
-      //wilkensZone.y = 420;
     }
 
     // minimap stuff

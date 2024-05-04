@@ -114,10 +114,10 @@ function setup() {
   wilkensZone = new Zone (-30, 580, 70, 'yellow');
   libraryZone = new Zone (-30, 35, 70, 'pink');
 
-  QuadJYCZone = new Zone (1000, 955, 70, 'black');
-  QuadDormZone = new Zone (350, 580, 70, 'black');
-  QuadWilkensZone = new Zone (465, 595, 70, 'black');
-  QuadLibraryZone = new Zone (420, 335, 70, 'black');
+  QuadJYCZone = new Zone (1050, 890, 120, 'red');
+  QuadDormZone = new Zone (322, 558, 50, 'red');
+  QuadWilkensZone = new Zone (410, 550, 40, 'red');
+  QuadLibraryZone = new Zone (385, 270, 120, 'red');
 
   // displays
   quadDisplay = new Display (556, 619, quadMap);

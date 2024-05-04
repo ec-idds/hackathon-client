@@ -9,7 +9,7 @@ function Library() {
   //     rect(this.x, this.y, this.size, this.size);
   //   }
   // };
-  
+
   this.setup = function () {
     // music.stopAll();
     // music.Library.loop();
@@ -51,7 +51,6 @@ function Library() {
     let QuadDist = dist(player.x, player.y, QuadLibraryZone.x + QuadLibraryZone.size / 2, QuadLibraryZone.y + QuadLibraryZone.size / 2);
     if (QuadDist < 50) {
       this.sceneManager.showScene(Quad);
-      // i like this spot
       player.x = 70;
       player.y = 80;
     }
