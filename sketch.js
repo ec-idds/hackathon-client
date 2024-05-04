@@ -119,12 +119,14 @@ function setup() {
   QuadWilkensZone = new Zone (465, 595, 70, 'black');
   QuadLibraryZone = new Zone (420, 335, 70, 'black');
 
+  // displays
   quadDisplay = new Display (556, 619, quadMap);
   JYCDisplay = new Display (1386, 1014, JYCMap);
   dormDisplay = new Display (618, 619, stJuliesMap);
   wilkensDisplay = new Display (475, 619, wilkensMap);
   libraryDisplay = new Display (1366, 1026, libraryMap);
 
+  // array of displays (not being used atm)
   displays = [quadDisplay, JYCDisplay, dormDisplay, wilkensDisplay, libraryDisplay];
 
   // seeker = new Seeker (50, 50, 30, 30, true, 4, reusablewb);
