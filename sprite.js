@@ -14,7 +14,9 @@ class Sprite{
     }
 
     move(keyCode) {
-
+        if (!keyIsPressed) {
+            return;
+        }
         if (keyCode === LEFT_ARROW) {
             this.x = this.x - this.speed;
         } else if (keyCode === RIGHT_ARROW) {
