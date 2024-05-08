@@ -138,7 +138,7 @@ function setup() {
   ];
 
   // character creation
-  player = new Sprite (trashcan, 100, 100, 30, 30, 5.0);
+  player = new Sprite (trashcan, 250, 260, 30, 30, 5.0);
 
   // zone creations for quad
   JYCZone = new Zone (380, 0, 70, 'blue');
