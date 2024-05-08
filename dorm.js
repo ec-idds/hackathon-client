@@ -63,8 +63,8 @@ function dorm() {
     let QuadDist = dist(player.x, player.y, QuadDormZone.x + QuadDormZone.size / 2, QuadDormZone.y + QuadDormZone.size / 2);
     if (QuadDist < 30) {
       this.sceneManager.showScene(Quad);
-      player.x = 500;
-      player.y = 60;
+      player.x = 480;
+      player.y = 80;
     }
   }
 }

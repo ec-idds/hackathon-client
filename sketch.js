@@ -141,10 +141,10 @@ function setup() {
   player = new Sprite (trashcan, 100, 100, 30, 30, 5.0);
 
   // zone creations for quad
-  JYCZone = new Zone (380, 20, 70, 'blue');
-  dormZone = new Zone (516, 50, 70, 'green');
-  wilkensZone = new Zone (-30, 580, 70, 'yellow');
-  libraryZone = new Zone (-30, 35, 70, 'pink');
+  JYCZone = new Zone (380, 0, 70, 'blue');
+  dormZone = new Zone (516, 20, 70, 'green');
+  wilkensZone = new Zone (-40, 540, 70, 'yellow');
+  libraryZone = new Zone (-30, 25, 70, 'pink');
 
   // zone creations for the 4 side maps
   QuadJYCZone = new Zone (1050, 890, 120, 'red');
@@ -152,7 +152,7 @@ function setup() {
   QuadWilkensZone = new Zone (410, 550, 40, 'red');
   QuadLibraryZone = new Zone (385, 270, 120, 'red');
 
-  // displays (not being used atm)
+  // displays
   quadDisplay = new Display (556, 619, quadMap);
   JYCDisplay = new Display (1386, 1014, JYCMap);
   dormDisplay = new Display (618, 619, stJuliesMap);

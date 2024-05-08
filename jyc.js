@@ -83,8 +83,8 @@ function JYC() {
     let QuadDist = dist(player.x, player.y, QuadJYCZone.x + QuadJYCZone.size / 2, QuadJYCZone.y + QuadJYCZone.size / 2);
     if (QuadDist < 50) {
       this.sceneManager.showScene(Quad);
-      player.x = 480;
-      player.y = 0;
+      player.x = 380;
+      player.y = 80;
     }
   }
 }

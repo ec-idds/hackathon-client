@@ -83,21 +83,33 @@ function Quad() {
     let jycDist = dist(player.x, player.y, JYCZone.x + JYCZone.size / 2, JYCZone.y + JYCZone.size / 2);
     if (jycDist < 37) {
       this.sceneManager.showScene(JYC);
+      // warps character near the entrance/exit
+      player.x = 950;
+      player.y = 925;
     }
 
     let dormDist = dist(player.x, player.y, dormZone.x + dormZone.size / 2, dormZone.y + dormZone.size / 2);
     if (dormDist < 50) {
       this.sceneManager.showScene(dorm);
+      // warps character near the entrance/exit
+      player.x = 320;
+      player.y = 500;
     }
 
     let libraryDist = dist(player.x, player.y, libraryZone.x + libraryZone.size / 2, libraryZone.y + libraryZone.size / 2);
     if (libraryDist < 50) {
       this.sceneManager.showScene(Library);
+      // warps character near the entrance/exit
+      player.x = 430;
+      player.y = 430;
     }
 
     let wilkensDist = dist(player.x, player.y, wilkensZone.x + wilkensZone.size / 2, wilkensZone.y + wilkensZone.size / 2);
     if (wilkensDist < 50) {
       this.sceneManager.showScene(wilkens);
+      // warps character near the entrance/exit
+      player.x = 300;
+      player.y = 520;
     }
 
     // minimap stuff
