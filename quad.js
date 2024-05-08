@@ -27,31 +27,20 @@ function Quad() {
   }
 
   this.draw = function () {
-    createCanvas(556, 619);
-    // background image
-    image(quadMap, 0, 0, 556, 619);
-    // warp zones
+    // renders the background
+    quadDisplay.draw();
+    // renders warp zones
     JYCZone.zone();
     dormZone.zone();
     wilkensZone.zone();
     libraryZone.zone();
 
-    // drawing constructed character
+    // draws constructed character
     player.draw();
 
     // currently 
-    if (keyIsPressed) {
-      if (keyCode === LEFT_ARROW) {
-        player.x = player.x - player.speed;
-      } else if (keyCode === RIGHT_ARROW) {
-        player.x = player.x + player.speed;
-      }
-      if (keyCode === UP_ARROW) {
-        player.y = player.y - player.speed;
-      } else if (keyCode == DOWN_ARROW) {
-        player.y = player.y + player.speed;
-      }
-    }
+    
+    player.move(keyCode);
 
     // draws the sprites
     for (s of sprites) {

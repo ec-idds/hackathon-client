@@ -24,23 +24,11 @@ function Library() {
   }
 
   this.draw = function () {
-    createCanvas(1366, 1026);
-    image(libraryMap, 0, 0, 1366, 1026);
+    libraryDisplay.draw();
     QuadLibraryZone.zone();
     player.draw();
 
-    if (keyIsPressed) {
-      if (keyCode === LEFT_ARROW) {
-        player.x = player.x - player.speed;
-      } else if (keyCode === RIGHT_ARROW) {
-        player.x = player.x + player.speed;
-      }
-      if (keyCode === UP_ARROW) {
-        player.y = player.y - player.speed;
-      } else if (keyCode == DOWN_ARROW) {
-        player.y = player.y + player.speed;
-      }
-    }
+    player.move(keyCode);
 
     // draws the sprites
     for (s of sprites) {

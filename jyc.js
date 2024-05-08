@@ -25,24 +25,12 @@ function JYC() {
 
 
   this.draw = function () {
-    createCanvas(1386, 1014);
-    image(JYCMap, 0, 0, 1386, 1014);
+    JYCDisplay.draw();
     QuadJYCZone.zone();
     player.draw();
 
 
-    if (keyIsPressed) {
-      if (keyCode === LEFT_ARROW) {
-        player.x = player.x - player.speed;
-      } else if (keyCode === RIGHT_ARROW) {
-        player.x = player.x + player.speed;
-      }
-      if (keyCode === UP_ARROW) {
-        player.y = player.y - player.speed;
-      } else if (keyCode == DOWN_ARROW) {
-        player.y = player.y + player.speed;
-      }
-    }
+    player.move(keyCode);
 
     // draws the sprites
     for (s of sprites) {

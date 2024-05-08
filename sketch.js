@@ -138,7 +138,7 @@ function setup() {
   ];
 
   // character creation
-  player = new Sprite (trashcan, 100, 100, 30, 30, true, 5.0);
+  player = new Sprite (trashcan, 100, 100, 30, 30, 5.0);
 
   // zone creations for quad
   JYCZone = new Zone (380, 20, 70, 'blue');
@@ -168,7 +168,3 @@ function setup() {
   mgr.showScene(StartScreen);
 }
 
-// does nothing atm
-function draw() {
-  
-}

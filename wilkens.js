@@ -24,23 +24,11 @@ function wilkens() {
   }
 
   this.draw = function () {
-    createCanvas(475, 619);
-    image(wilkensMap, 0, 0, 475, 619);
+    wilkensDisplay.draw();
     QuadWilkensZone.zone();
     player.draw();
 
-    if (keyIsPressed) {
-      if (keyCode === LEFT_ARROW) {
-        player.x = player.x - player.speed;
-      } else if (keyCode === RIGHT_ARROW) {
-        player.x = player.x + player.speed;
-      }
-      if (keyCode === UP_ARROW) {
-        player.y = player.y - player.speed;
-      } else if (keyCode == DOWN_ARROW) {
-        player.y = player.y + player.speed;
-      }
-    }
+    player.move(keyCode);
 
     // draws the sprites
     for (s of sprites) {
