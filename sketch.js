@@ -160,7 +160,7 @@ function setup() {
   libraryDisplay = new Display (1366, 1026, libraryMap);
 
   // array of displays (not being used atm)
-  displays = [quadDisplay, JYCDisplay, dormDisplay, wilkensDisplay, libraryDisplay];
+  // displays = [quadDisplay, JYCDisplay, dormDisplay, wilkensDisplay, libraryDisplay];
 
   var mgr = new SceneManager();
   // mgr.bkImage = bkImage; // inject bkImage property
