@@ -1,5 +1,6 @@
 
 let pages = [Quad, JYC, dorm, Library, wilkens];
+let propArray = [];
 let campus_bg;
 let lobby_bg;
 let trashcan;
@@ -106,9 +107,64 @@ function preload() {
 
 function setup() {
   createCanvas(400, 600);
-  player = new Sprite(trashcan, 100, 100, 30, 30, true);
+
+  // long lost array of props
+  propArray = [ 
+    trashcan,
+    squirrel,
+    blue_chair,
+    yellow_chair,
+    umbrella_chair,
+    tree1,
+    tree2,
+    tree3,
+    tree4,
+    beaker,
+    brain,
+    microscope,
+    plant1,
+    plant2,
+    plant3,
+    table1,
+    table2,
+    chair1,
+    chair2,
+    chair3,
+    chair4,
+    bed,
+    plasticwb,
+    reusablewb,
+    dodgeball,
+  ];
+
+  // character creation
+  player = new Sprite (trashcan, 250, 260, 30, 30, 5.0);
+
+  // zone creations for quad
+  JYCZone = new Zone (380, 0, 70, 'blue');
+  dormZone = new Zone (516, 20, 70, 'green');
+  wilkensZone = new Zone (-40, 540, 70, 'yellow');
+  libraryZone = new Zone (-30, 25, 70, 'pink');
+
+  // zone creations for the 4 side maps
+  QuadJYCZone = new Zone (1050, 890, 120, 'red');
+  QuadDormZone = new Zone (322, 558, 50, 'red');
+  QuadWilkensZone = new Zone (410, 550, 40, 'red');
+  QuadLibraryZone = new Zone (385, 270, 120, 'red');
+
+  // displays
+  quadDisplay = new Display (556, 619, quadMap);
+  JYCDisplay = new Display (1386, 1014, JYCMap);
+  dormDisplay = new Display (618, 619, stJuliesMap);
+  wilkensDisplay = new Display (475, 619, wilkensMap);
+  libraryDisplay = new Display (1366, 1026, libraryMap);
+
+  // array of displays (not being used atm)
+  // displays = [quadDisplay, JYCDisplay, dormDisplay, wilkensDisplay, libraryDisplay];
+
   var mgr = new SceneManager();
   // mgr.bkImage = bkImage; // inject bkImage property
   mgr.wire();
   mgr.showScene(StartScreen);
 }
+

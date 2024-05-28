@@ -1,140 +1,131 @@
 function Quad() {
 
-  let x = 200;
-  let y = 200;
-  let d = 40;
+  // creates a new array of sprites
+  let sprites = [];
 
-  let mapOn = false;
+  // let mapOn = false;
 
-  let JYCZone = {
-    x: 380,
-    y: 20,
-    size: 70,
-    draw: function () {
-      fill('blue');
-      rect(this.x, this.y, this.size, this.size);
-    }
-  };
-
-  let dormZone = {
-    x: 516,
-    y: 50,
-    size: 70,
-    draw: function () {
-      fill('green');
-      rect(this.x, this.y, this.size, this.size);
-    }
-  };
-
-  let wilkensZone = {
-    x: - 30,
-    y: 580,
-    size: 70,
-    draw: function () {
-      fill('yellow');
-      rect(this.x, this.y, this.size, this.size);
-    }
-  };
-
-  let libraryZone = {
-    x: - 30,
-    y: 35,
-    size: 70,
-    draw: function () {
-      fill('pink');
-      rect(this.x, this.y, this.size, this.size);
-    }
-  };
-
-  let miniMap = {
-    x: 50,
-    y: 50,
-    size: 400,
-    draw: function () {
-      fill('orange');
-      rect(this.x, this.y, this.size, this.size);
-    }
-  };
+  // let miniMap = {
+  //   x: 50,
+  //   y: 50,
+  //   size: 400,
+  //   draw: function () {
+  //     fill('orange');
+  //     rect(this.x, this.y, this.size, this.size);
+  //   }
+  // };
 
   this.setup = function () {
+    // music stuff
     music.stopAll();
     music.Quad.loop();
+
+    // pushes sprites into the sprite array
+    for(let i = 0; i < 9; i++){
+      sprites.push(new Sprite(propArray[i], 200 + i * 20, 5, 20, 20));
+    }
   }
 
   this.draw = function () {
-    createCanvas(556, 619);
-    image(quadMap, 0, 0, 556, 619);
-    JYCZone.draw();
-    dormZone.draw();
-    libraryZone.draw();
-    wilkensZone.draw();
+    // renders the background
+    quadDisplay.draw();
+    // renders warp zones
+    JYCZone.zone();
+    dormZone.zone();
+    wilkensZone.zone();
+    libraryZone.zone();
 
-    if (keyIsPressed) {
-      if (keyCode === LEFT_ARROW) {
-        player.x = player.x - 3;
-      } else if (keyCode === RIGHT_ARROW) {
-        player.x = player.x + 3;
-      }
-      if (keyCode === UP_ARROW) {
-        player.y = player.y - 3;
-      } else if (keyCode == DOWN_ARROW) {
-        player.y = player.y + 3;
-      }
+    // draws constructed character
+    player.draw();
+
+    // currently 
+    
+    player.move(keyCode);
+
+    // draws the sprites
+    for (s of sprites) {
+      s.draw();
     }
 
-    let mapOn = false;
+    // what allows for the props to change image
+    if (mouseIsPressed && (mouseY < 24) && (mouseY > 3) && (mouseX > 201) && (mouseX < 216)) {
+      player.image = propArray[0];
+    }
+    if (mouseIsPressed && (mouseY < 24) && (mouseY > 3) && (mouseX > 219) && (mouseX < 237)) {
+      player.image = propArray[1];
+    }
+    if (mouseIsPressed && (mouseY < 24) && (mouseY > 3) && (mouseX > 238) && (mouseX < 257)) {
+      player.image = propArray[2];
+    }
+    if (mouseIsPressed && (mouseY < 24) && (mouseY > 3) && (mouseX > 261) && (mouseX < 277)) {
+      player.image = propArray[3];
+    }
+    if (mouseIsPressed && (mouseY < 24) && (mouseY > 3) && (mouseX > 280) && (mouseX < 299)) {
+      player.image = propArray[4];
+    }
+    if (mouseIsPressed && (mouseY < 24) && (mouseY > 3) && (mouseX > 300) && (mouseX < 316)) {
+      player.image = propArray[5];
+    }
+    if (mouseIsPressed && (mouseY < 24) && (mouseY > 3) && (mouseX > 320) && (mouseX < 339)) {
+      player.image = propArray[6];
+    }
+    if (mouseIsPressed && (mouseY < 24) && (mouseY > 3) && (mouseX > 342) && (mouseX < 355)) {
+      player.image = propArray[7];
+    }
+    if (mouseIsPressed && (mouseY < 24) && (mouseY > 3) && (mouseX > 361) && (mouseX < 376)) {
+      player.image = propArray[8];
+    }
 
-    JYCZone.draw();
-    dormZone.draw();
-    libraryZone.draw();
-    wilkensZone.draw();
+    // let mapOn = false;
+
+    // currently how warps are working
 
     let jycDist = dist(player.x, player.y, JYCZone.x + JYCZone.size / 2, JYCZone.y + JYCZone.size / 2);
     if (jycDist < 37) {
       this.sceneManager.showScene(JYC);
-      // player.x = 1100;
-      // player.y = 955;
-      //JYCZone.y = 400;
+      // warps character near the entrance/exit
+      player.x = 950;
+      player.y = 925;
     }
 
     let dormDist = dist(player.x, player.y, dormZone.x + dormZone.size / 2, dormZone.y + dormZone.size / 2);
     if (dormDist < 50) {
       this.sceneManager.showScene(dorm);
-      // player.x = 350;
-      // player.y = 580;
-      //dormZone.y = 20;
+      // warps character near the entrance/exit
+      player.x = 320;
+      player.y = 500;
     }
 
     let libraryDist = dist(player.x, player.y, libraryZone.x + libraryZone.size / 2, libraryZone.y + libraryZone.size / 2);
     if (libraryDist < 50) {
       this.sceneManager.showScene(Library);
-      // player.x = 420;
-      // player.y = 335;
-      //libraryZone.y = 20;
+      // warps character near the entrance/exit
+      player.x = 430;
+      player.y = 430;
     }
 
     let wilkensDist = dist(player.x, player.y, wilkensZone.x + wilkensZone.size / 2, wilkensZone.y + wilkensZone.size / 2);
     if (wilkensDist < 50) {
       this.sceneManager.showScene(wilkens);
-      // player.x = 465;
-      // player.y = 595;
-      //wilkensZone.y = 420;
+      // warps character near the entrance/exit
+      player.x = 300;
+      player.y = 520;
     }
 
-    player.draw();
+    // minimap stuff
 
-    if (keyIsPressed) {
-      player.keyIsPressed(keyCode);
+    // if (keyIsPressed) {
+    //   player.keyIsPressed(keyCode);
 
-      if (keyCode === SHIFT) {
-        mapOn = true;
-      } else {
-        mapOn = false;
-      }
-    }
-    if (mapOn === true) {
-      miniMap.draw();
-    }
+    //   if (keyCode === SHIFT) {
+    //     mapOn = true;
+    //   } else {
+    //     mapOn = false;
+    //   }
+    // }
+    // if (mapOn === true) {
+    //   miniMap.draw();
+    // }
   }
 }
 

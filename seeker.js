@@ -1,70 +1,82 @@
 // create tunnel shaded area 
 // figure out how to implement movement of the shaded area 
 
-function Seeker() {
+// create an abstract class character, with image, x, y, and speed properties. also need movement and draw methods
+// create a prop class, with a standard speed
+// create a seeker class, with a faster speed 
 
-  let seeker = {
-    x: 200,
-    y: 200,
-    size: 40,
-    draw: function () {
-      noStroke();
-      fill('orange');
-      ellipse(this.x, this.y, this.size, this.size);
-    }
+// potential class idea 
+class Seeker extends Sprite {
+  constructor (x, y, w, h, controllable, speed, image){
+    super(x, y, w, h, controllable, speed, image);
   }
 
-  let flashlightVision = {
-    start: radians(230),
-    end: radians(-35),
-    draw: function () {
+  Seeker() {
 
-      noStroke();
-
-      //flashlight vision
-      push();
-      beginClip({ invert: true });
-      arc(seeker.x, seeker.y, 450, 450, this.start, this.end, PIE);
-      endClip();
-
-      fill('black');
-      rect(0, 0, width, height)
-      pop();
-    }
-  }
-
-  this.setup = function () {
-    createCanvas(500, 500);
-  }
-
-  this.draw = function () {
-    background('Purple');
-    flashlightVision.draw();
-    seeker.draw();
-
-
-    if (keyIsPressed) {
-      if (keyCode == LEFT_ARROW) {
-        seeker.x--;
-        flashlightVision.start = radians(150);
-        flashlightVision.end = radians(210);
-
-      } else if (keyCode == RIGHT_ARROW) {
-        seeker.x++;
-        flashlightVision.start = radians(-30);
-        flashlightVision.end = radians(30);
-      }
-      if (keyCode == UP_ARROW) {
-        seeker.y--;
-        flashlightVision.start = radians(-120);
-        flashlightVision.end = radians(-60);
-      } else if (keyCode == DOWN_ARROW) {
-        seeker.y++;
-        flashlightVision.start = radians(60);
-        flashlightVision.end = radians(120);
+    // let seeker = {
+    //   x: 200,
+    //   y: 200,
+    //   size: 40,
+    //   draw: function () {
+    //     noStroke();
+    //     fill('orange');
+    //     ellipse(this.x, this.y, this.size, this.size);
+    //   }
+    // }
+  
+    let flashlightVision = {
+      start: radians(230),
+      end: radians(-35),
+      draw: function () {
+  
+        noStroke();
+  
+        //flashlight vision
+        push();
+        beginClip({ invert: true });
+        arc(seeker.x, seeker.y, 450, 450, this.start, this.end, PIE);
+        endClip();
+  
+        fill('black');
+        rect(0, 0, width, height)
+        pop();
       }
     }
+  
+    this.setup = function () {
+      createCanvas(500, 500);
+    }
+  
+    this.draw = function () {
+      background('Purple');
+      flashlightVision.draw();
+      seeker.draw();
+  
+  
+      if (keyIsPressed) {
+        if (keyCode == LEFT_ARROW) {
+          seeker.x--;
+          flashlightVision.start = radians(150);
+          flashlightVision.end = radians(210);
+  
+        } else if (keyCode == RIGHT_ARROW) {
+          seeker.x++;
+          flashlightVision.start = radians(-30);
+          flashlightVision.end = radians(30);
+        }
+        if (keyCode == UP_ARROW) {
+          seeker.y--;
+          flashlightVision.start = radians(-120);
+          flashlightVision.end = radians(-60);
+        } else if (keyCode == DOWN_ARROW) {
+          seeker.y++;
+          flashlightVision.start = radians(60);
+          flashlightVision.end = radians(120);
+        }
+      }
+    }
+  
+    // hard code the locations  
   }
-
-  // hard code the locations  
 }
+

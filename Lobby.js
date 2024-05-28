@@ -33,7 +33,7 @@ function Lobby() {
   }
 
   this.draw = function () {
-    userStartAudio();
+    // userStartAudio();
     image(lobby_bg, 0, 0, width, height);
     fill(31, 75, 126);
 
