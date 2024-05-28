@@ -5,8 +5,8 @@ function Lobby() {
   this.setup = function () {
     new Canvas();
 
-    // music.stopAll();
-    // music.Lobby.loop();
+    music.stopAll();
+    music.Lobby.loop();
 
     lobbyTimer = new GameTimer();
     lobbyTimer.start();

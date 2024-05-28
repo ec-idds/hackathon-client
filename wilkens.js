@@ -14,8 +14,8 @@ function wilkens() {
   // };
 
   this.setup = function () {
-    // music.stopAll();
-    // music.Wilkens.loop();
+    music.stopAll();
+    music.Wilkens.loop();
 
     // pushes sprites into the sprite array
     for(let i = 9; i < 12; i++){

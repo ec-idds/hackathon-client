@@ -14,8 +14,8 @@ function JYC() {
   // };
 
   this.setup = function () {
-    // music.stopAll();
-    // music.JYC.loop();
+    music.stopAll();
+    music.JYC.loop();
 
     // pushes sprites into the sprite array
     for(let i = 12; i < 21; i++){

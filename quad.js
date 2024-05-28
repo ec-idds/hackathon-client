@@ -17,8 +17,8 @@ function Quad() {
 
   this.setup = function () {
     // music stuff
-    // music.stopAll();
-    // music.Quad.loop();
+    music.stopAll();
+    music.Quad.loop();
 
     // pushes sprites into the sprite array
     for(let i = 0; i < 9; i++){

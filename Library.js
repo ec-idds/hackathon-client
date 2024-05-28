@@ -14,8 +14,8 @@ function Library() {
   // };
 
   this.setup = function () {
-    // music.stopAll();
-    // music.Library.loop();
+    music.stopAll();
+    music.Library.loop();
 
     // pushes sprites into the sprite array
     for(let i = 12; i < 21; i++){

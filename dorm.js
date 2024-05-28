@@ -14,8 +14,8 @@ function dorm() {
   // };
 
   this.setup = function () {
-    // music.stopAll();
-    // music.StJulies.loop();
+    music.stopAll();
+    music.StJulies.loop();
 
     // pushes sprites into the sprite array
     for(let i = 20; i < 23; i++){
